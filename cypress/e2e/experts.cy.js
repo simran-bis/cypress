@@ -94,7 +94,7 @@ describe('experts', () => {
     it('when user want to find expert  value', () => {
         cy.viewport(1200, 1200)
         cy.wait(3000)
-        cy.log('created new user')
+            // cy.log('created new user')
 
         // cy.get('button').first().click({ force: true })
         // cy.get(".expert").click()
