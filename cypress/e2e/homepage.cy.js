@@ -11,5 +11,14 @@ describe('home page', () => {
         cy.get(".MuiGrid-grid-xs-true > .MuiGrid-container > :nth-child(1) > .MuiButtonBase-root").click()
         cy.get(".MuiInputBase-root").type('healthcare{enter}')
 
+        cy.wait(20000)
+        cy.get(".MuiTabs-flexContainer > :nth-child(2)").click()
+        cy.wait(20000)
+        cy.get(".MuiTabs-flexContainer > :nth-child(3)").click()
+        cy.wait(20000)
+
+        cy.get(".MuiTabs-flexContainer > :nth-child(4)").click()
+        cy.wait(10000)
+
     })
 })

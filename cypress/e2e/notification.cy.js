@@ -1,4 +1,4 @@
-describe('post answer', () => {
+describe('ask a question', () => {
 
     before(() => {
         cy.visit('https://community.insightmonk.com/discover')
@@ -7,22 +7,18 @@ describe('post answer', () => {
         cy.get(".jss20 > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input").type("bis@1234")
         cy.get(".MuiButtonBase-root").click()
         cy.visit('https://community.insightmonk.com/')
-            // cy.contains("button", "Skip").click()
 
         cy.get('[style="align-items: center; display: flex; justify-content: flex-end; margin-top: 15px;"] > div > button').click()
 
     })
 
 
-    it('check when user ask a question without required details.', () => {
-        cy.wait(8000)
-        cy.get(".MuiGrid-grid-xs-true").contains("h6", "Variable Rate Technology").click()
-        cy.wait(2000)
-        cy.contains("span", "Post Answer").click()
+    it('check when user want to check notification.', () => {
+        cy.get(".MuiBadge-root > .MuiSvgIcon-root > path").click()
+        cy.wait(5000)
+        cy.get(".MuiBadge-root > .MuiSvgIcon-root > path").click()
 
     })
-
-
 
 
 })

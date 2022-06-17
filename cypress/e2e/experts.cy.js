@@ -87,42 +87,42 @@ describe('experts', () => {
         cy.contains("span", "Urgently, within 1-2 days").click()
         cy.wait(6000)
         cy.contains("button", "Next ").click()
-
     })
 
 
-    it('when user want to find expert  value', () => {
+    it('when user want to search expert', () => {
+
         cy.viewport(1200, 1200)
         cy.wait(3000)
-            // cy.log('created new user')
+        cy.log('created new user')
 
         // cy.get('button').first().click({ force: true })
-        // cy.get(".expert").click()
-        // cy.wait(3000)
-        // cy.get(".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input").type("alix berton")
-        // cy.get(".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input").type('{backspace}')
-        // cy.get(".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input").type('{backspace}')
-        // cy.get(".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input").type('{backspace}')
-        // cy.get(".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input").type('{backspace}')
-        // cy.get(".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input").type('{backspace}')
-        // cy.get(".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input").type('{backspace}')
-        // cy.get(".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input").type('{backspace}')
-        // cy.get(".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input").type('{backspace}')
-        // cy.get(".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input").type('{backspace}')
-        // cy.wait(5000)
+        cy.get(".expert").click()
+        cy.wait(10000)
+        cy.get(".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input").type("alix berton")
+        cy.get(".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input").type('{backspace}')
+        cy.get(".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input").type('{backspace}')
+        cy.get(".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input").type('{backspace}')
+        cy.get(".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input").type('{backspace}')
+        cy.get(".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input").type('{backspace}')
+        cy.get(".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input").type('{backspace}')
+        cy.get(".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input").type('{backspace}')
+        cy.get(".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input").type('{backspace}')
+        cy.get(".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input").type('{backspace}')
+        cy.wait(5000)
 
-        //     // cy.get('[type="checkbox"]').check('Space Tech')
-        //     // cy.wait(5000)
-        //     //     //view more filter
-        // cy.contains("a", "View All Filters").click()
-        // cy.wait(2000)
         // cy.get('[type="checkbox"]').check('Space Tech')
         // cy.wait(5000)
+        //     //view more filter
+        cy.contains("a", "View All Filters").click()
+        cy.wait(2000)
+        cy.get('[type="checkbox"]').check('Space Tech')
+        cy.wait(5000)
 
-        //click on next button to view more experts
-        // cy.contains("button", "Next ").click()
-        // cy.wait(4000)
-        // cy.contains("button", "Next ").click()
+        // click on next button to view more experts
+        cy.contains("button", "Next ").click()
+        cy.wait(4000)
+        cy.contains("button", "Next ").click()
 
 
 
