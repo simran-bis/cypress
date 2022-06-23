@@ -19,9 +19,13 @@ import './commands'
 
 require('cypress-xpath')
 Cypress.on('uncaught:exception', (err, runnable) => {
-        // returning false here prevents Cypress from
-        // failing the test
-        return false
+    // returning false here prevents Cypress from
+    // failing the test
+    return false
+})
+Cypress.config({
+        viewportWidth: 1200,
+        viewportHeight: 1000
     })
     // Alternatively you can use CommonJS syntax:
     // require('./commands')

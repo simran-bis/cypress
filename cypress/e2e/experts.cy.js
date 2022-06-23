@@ -1,102 +1,20 @@
 describe('experts', () => {
 
-    before(() => {
-        cy.visit('https://community.insightmonk.com/discover')
-        cy.get(":nth-child(1) > .MuiButtonBase-root > .MuiButton-label").click()
-        cy.get("form > :nth-child(1) > .MuiInputBase-root > .MuiInputBase-input").type("bhalla.simran297@gmail.com")
-        cy.get(".jss20 > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input").type("bis@1234")
-        cy.get(".MuiButtonBase-root").click()
-        cy.visit('https://community.insightmonk.com/')
-        cy.contains("button", "Skip").click()
+    beforeEach(() => {
+        cy.viewport(1200, 1000)
 
-
-
-    })
-
-
-
-
-
-
-    it('when expert not found and user want to book a consultaion ', () => {
-        cy.viewport(1200, 1200)
-
-        cy.get('button').first().click({ force: true })
-        cy.get(".expert").click()
-        cy.wait(8000)
-        cy.get('[type="checkbox"]').check('Precision Medicine')
-
-        cy.contains("a", "View All Filters").click()
-        cy.wait(2000)
-        cy.get('[type="checkbox"]').check('Space Tech')
+        cy.visit('https://demo.insightmonk.com/discover')
+        cy.clearCookies({ log: true })
+        cy.clearLocalStorage({ log: true })
+        cy.contains("span", "Login").click()
+        cy.get('input[name="email"]').type("bhalla.simran297@gmail.com")
+        cy.get('input[name="password"]').type("bis@1998")
+        cy.contains("span", "Sign In").click()
         cy.wait(5000)
-
-        //click on next button to view more experts
-        cy.contains("button", "Next ").click()
-        cy.wait(4000)
-        cy.contains("button", "Next ").click()
-        cy.wait(4000)
-        cy.contains("button", " Prev").click()
-        cy.wait(4000)
-        cy.contains("button", " Prev").click()
-        cy.wait(4000)
-        cy.get('[type="checkbox"]').check('Healthcare')
-        cy.wait(4000)
-        cy.get(".MuiSlider-thumb")
-            .invoke("val", 600)
-            .trigger("change")
-            .click({ force: true })
-
-        //if user want to uncheck checked topic
-        cy.get('[type="checkbox"]').uncheck('Precision Medicine')
-            //book a consultation
-        cy.wait(2000)
-        cy.get(".MuiGrid-root .MuiGrid-item").contains("b", "Click to Book a Consultation").click()
-
-        cy.get(".MuiOutlinedInput-adornedEnd").click({ multiple: true })
-
-        Cypress.Commands.add('getDropdownOptions', () => {
-            return cy.get('.MuiAutocomplete-popper [role="listbox"] [role="option"]', {
-                timeout: 10000,
-            });
-        });
-        cy.getDropdownOptions().contains('Space Tech').click();
-        cy.wait(2000)
-        cy.get(".MuiOutlinedInput-adornedEnd").click({ multiple: true })
-
-        Cypress.Commands.add('getDropdownOptions', () => {
-            return cy.get('.MuiAutocomplete-popper [role="listbox"] [role="option"]', {
-                timeout: 10000,
-            });
-        });
-        cy.getDropdownOptions().contains('Precision Medicine').click();
-        cy.wait(2000)
-
-        cy.contains("button", "Next ").click()
-        cy.wait(1000)
-        cy.get(":nth-child(1) > #panel1a-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root").click()
-        cy.wait(2000)
-        cy.get('[value="Market research"]').check()
-        cy.wait(2000)
-        cy.contains("button", "Next ").click()
-        cy.get("#fullWidth").type("testing test")
-        cy.get('[name="projectDescription"]').type("Need a regulatory writer to prepare 510(k) submission Need a regulatory writer to prepare 510(k) submission Need a regulatory writer to prepare 510(k) submission  ");
-        cy.wait(6000)
-        cy.contains("button", "Next ").click()
-        cy.get("#outlined-multiline-static").type("20")
-        cy.contains("span", "Urgently, within 1-2 days").click()
-        cy.wait(6000)
-        cy.contains("button", "Next ").click()
+        cy.contains("button", "Skip").click()
     })
 
-
-    it('when user want to search expert', () => {
-
-        cy.viewport(1200, 1200)
-        cy.wait(3000)
-        cy.log('created new user')
-
-        // cy.get('button').first().click({ force: true })
+    it('check autosuggest when user want to search an expert', () => {
         cy.get(".expert").click()
         cy.wait(10000)
         cy.get(".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input").type("alix berton")
@@ -109,24 +27,79 @@ describe('experts', () => {
         cy.get(".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input").type('{backspace}')
         cy.get(".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input").type('{backspace}')
         cy.get(".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input").type('{backspace}')
+        cy.get(".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input").type('{backspace}')
+        cy.get(".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input").type('{backspace}')
         cy.wait(5000)
-
-        // cy.get('[type="checkbox"]').check('Space Tech')
-        // cy.wait(5000)
-        //     //view more filter
-        cy.contains("a", "View All Filters").click()
+        cy.contains("span", "Next ").click()
         cy.wait(2000)
-        cy.get('[type="checkbox"]').check('Space Tech')
-        cy.wait(5000)
-
-        // click on next button to view more experts
-        cy.contains("button", "Next ").click()
-        cy.wait(4000)
-        cy.contains("button", "Next ").click()
-
+        cy.contains("span", "Next ").click()
 
 
     })
+
+
+
+    it('when user want to find expert with given filter ', () => {
+
+        cy.get(".expert").click()
+        cy.wait(8000)
+        cy.get(":nth-child(1) > #panel1bh-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root").click()
+        cy.get('[type="checkbox"]').check('Precision Medicine')
+        cy.wait(2000)
+        cy.get('[type="checkbox"]').check('Space Tech')
+        cy.get(":nth-child(2) > #panel1bh-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root").click()
+        cy.wait(2000)
+        cy.get('[type="checkbox"]').check('Healthcare')
+        cy.get(":nth-child(3) > #panel1bh-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root").click()
+        cy.wait(2000)
+        cy.get('[type="checkbox"]').check('United States')
+        cy.get(".MuiPaper-root.Mui-expanded > #panel1bh-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root").click()
+
+    })
+
+    it('check when user want to request for a consultation with searched expert ', () => {
+        cy.get(".expert").click()
+        cy.get('[placeholder="Find Experts"]').type('Sonu yadav')
+        cy.wait(8000)
+        cy.get(".MuiGrid-justify-content-xs-center").contains("h6", "Sonu").click()
+        cy.wait(5000)
+        cy.contains("span", "Request a consultation").click()
+        cy.get(":nth-child(1) > #panel1a-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root").click()
+        cy.get('[value="Idea discussion"]').check()
+        cy.wait(5000)
+        cy.contains("span", "Next ").click()
+        cy.get('[name="title"]').type("testing testing")
+        cy.get('[placeholder="Enter project Description"]').type("The resources of a microservice based applications can be manipulated in several ways. It is possible to create, update, delete them, and do other operations as well.")
+        cy.contains("span", "Next ").click()
+        cy.contains("span", "Within a week").click()
+        cy.contains("span", "Next ").click()
+
+    })
+    it('check when expert not found and user want to put a project for consultation', () => {
+        cy.get(".expert").click()
+        cy.get('[placeholder="Find Experts"]').type('Rohan yadav')
+        cy.wait(8000)
+        cy.contains("b", "Click to Book a Consultation").click()
+        cy.get(".MuiInputBase-root").click({ multiple: true })
+        Cypress.Commands.add('getDropdownOptions', () => {
+            return cy.get('.MuiAutocomplete-popper [role="listbox"] [role="option"]', {
+                timeout: 10000,
+            });
+        });
+        cy.getDropdownOptions().contains('Precision Medicine').click();
+        cy.get(".MuiCardActions-root > .MuiGrid-container > :nth-child(2) > .MuiButtonBase-root").click()
+        cy.get(":nth-child(1) > #panel1a-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root").click()
+        cy.get('[value="Idea discussion"]').check()
+        cy.wait(5000)
+        cy.contains("span", "Next ").click()
+        cy.get('[name="title"]').type("testing testing")
+        cy.get('[placeholder="Enter project Description"]').type("The resources of a microservice based applications can be manipulated in several ways. It is possible to create, update, delete them, and do other operations as well.")
+        cy.contains("span", "Next ").click()
+        cy.get('[placeholder="Enter budget in $"]').type("200")
+        cy.contains("span", "Within a week").click()
+        cy.contains("span", "Next ").click()
+    })
+
 
 
 

@@ -1,14 +1,14 @@
 describe('ask a question', () => {
 
     before(() => {
-        cy.visit('https://community.insightmonk.com/discover')
-        cy.get(":nth-child(1) > .MuiButtonBase-root > .MuiButton-label").click()
-        cy.get("form > :nth-child(1) > .MuiInputBase-root > .MuiInputBase-input").type("bhalla.simran297@gmail.com")
-        cy.get(".jss20 > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input").type("bis@1234")
-        cy.get(".MuiButtonBase-root").click()
-        cy.visit('https://community.insightmonk.com/')
-
-        cy.get('[style="align-items: center; display: flex; justify-content: flex-end; margin-top: 15px;"] > div > button').click()
+        cy.visit('https://demo.insightmonk.com/discover')
+        cy.clearCookies({ log: true })
+        cy.clearLocalStorage({ log: true })
+        cy.contains("span", "Login").click()
+        cy.get('input[name="email"]').type("bhalla.simran297@gmail.com")
+        cy.get('input[name="password"]').type("bis@1998")
+        cy.contains("span", "Sign In").click()
+        cy.wait(5000)
 
     })
 

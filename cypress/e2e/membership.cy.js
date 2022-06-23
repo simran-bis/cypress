@@ -1,48 +1,86 @@
 describe('ask a question', () => {
 
     before(() => {
-
-
-        cy.visit('https://community.insightmonk.com/discover')
-        cy.get(":nth-child(1) > .MuiButtonBase-root > .MuiButton-label").click()
-        cy.get("form > :nth-child(1) > .MuiInputBase-root > .MuiInputBase-input").type("bhalla.simran297@gmail.com")
-        cy.get(".jss20 > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input").type("bis@1234")
-        cy.get(".MuiButtonBase-root").click()
-        cy.visit('https://community.insightmonk.com/')
-
-        cy.get('[style="align-items: center; display: flex; justify-content: flex-end; margin-top: 15px;"] > div > button').click()
+        cy.visit('https://demo.insightmonk.com/discover')
+        cy.clearCookies({ log: true })
+        cy.clearLocalStorage({ log: true })
+        cy.contains("span", "Login").click()
+        cy.get('input[name="email"]').type("bhalla.simran297@gmail.com")
+        cy.get('input[name="password"]').type("bis@1998")
+        cy.contains("span", "Sign In").click()
+        cy.wait(5000)
+        cy.contains("button", "Skip").click()
 
     })
 
 
-    it('check when user want to check notification.', () => {
+    it('check membership plan when user already  an expert', () => {
         cy.wait(6000)
-        cy.get(":nth-child(3) > .MuiButtonBase-root").click()
+        cy.get(".MuiGrid-container > :nth-child(2) > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root > path").click()
         cy.wait(5000)
+        cy.get('.MuiButton-containedPrimary').then(($body) => {
+            if ($body.find('Click here to be an expert').is(':visible')) {
+                cy.log('A row  exists')
+
+                cy.contains("span", "Click here to be an expert").click()
+            } else {
+                cy.log('A row doesnt exists')
+            }
+        });
+        cy.contains("span", "Quaterly")
+        cy.contains("span", "Annual")
+    })
+    it('when user want to check membership plan and  be an expert.', () => {
+        cy.visit('https://demo.insightmonk.com/discover')
+        cy.clearCookies({ log: true })
+        cy.clearLocalStorage({ log: true })
+        cy.contains("span", "Login").click()
+        cy.get('input[name="email"]').type("bhalla.simran297+128@gmail.com")
+        cy.get('input[name="password"]').type("simran123")
+        cy.contains("span", "Sign In").click()
+        cy.wait(5000)
+        cy.contains("button", "Skip").click()
+        cy.wait(6000)
+        cy.get(".MuiGrid-container > :nth-child(2) > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root > path").click()
+        cy.wait(5000)
+        cy.contains("span", "Quaterly")
+        cy.contains("span", "Annual")
+        cy.wait(2000)
         cy.contains("span", "Click here to be an expert").click()
 
     })
-    it('check when user want to choose membership plan.', () => {
+    it('when user want to apply any membership plan', () => {
+        cy.visit('https://demo.insightmonk.com/discover')
+        cy.clearCookies({ log: true })
+        cy.clearLocalStorage({ log: true })
+        cy.contains("span", "Login").click()
+        cy.get('input[name="email"]').type("bhalla.simran297@gmail.com")
+        cy.get('input[name="password"]').type("bis@1998")
+        cy.contains("span", "Sign In").click()
+        cy.wait(5000)
+        cy.contains("button", "Skip").click()
         cy.wait(6000)
-        cy.contains("span", "Monthly").click()
-        cy.wait(6000)
+        cy.get(".MuiGrid-container > :nth-child(2) > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root > path").click()
+        cy.wait(5000)
         cy.contains("span", "Quaterly").click()
-        cy.wait(6000)
+        cy.wait(2000)
         cy.contains("span", "Annual").click()
-
-
-    })
-    it('check when user want to choose quarterly membership plan as a gold user.', () => {
-        cy.wait(6000)
-
+        cy.wait(2000)
+        cy.contains("span", "Get Started").first().click()
+        cy.wait(2000)
+        cy.contains("button", "Disagree").click()
+        cy.wait(2000)
         cy.contains("span", "Quaterly").click()
         cy.get(":nth-child(2) > .MuiPaper-root > .MuiCardContent-root > .MuiGrid-container > :nth-child(5) > .MuiButtonBase-root").click()
-        cy.wait(1000)
-        cy.contains("span", "Disagree").click()
+        cy.wait(2000)
+        cy.contains("button", "Disagree").click()
 
 
 
     })
+
+
+
 
 
 })

@@ -1,11 +1,19 @@
 describe('forgotpassword', () => {
-    it('insightMonk test', () => {
-        cy.visit('https://community.insightmonk.com/discover')
+    it('when user forgot password', () => {
+        cy.visit('https://demo.insightmonk.com/discover')
+        cy.clearCookies({ log: true })
+        cy.clearLocalStorage({ log: true })
+        cy.contains("span", "Login").click()
+        cy.get('input[name="email"]').type("bhalla.simran297@gmail.com")
+        cy.get('input[name="password"]').type("bis@1994")
+        cy.contains("span", "Sign In").click()
+        cy.wait(4000)
+        cy.contains("a", "Forgot password?").click()
+        cy.wait(2000)
+        cy.get('input[name="email"]').type("bhalla.simran297@gmail.com")
+        cy.contains("span", "Send recovery email").click()
 
-        cy.get(":nth-child(1) > .MuiButtonBase-root > .MuiButton-label").click()
-        cy.get(".MuiGrid-root > .MuiTypography-root").click()
-        cy.get(".MuiInputBase-input").type("bhalla.simran297@gmail.com")
-        cy.get(".MuiButtonBase-root").click()
-        cy.get("b").click()
+
+
     })
 })
