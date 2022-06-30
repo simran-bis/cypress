@@ -17,7 +17,7 @@ describe('experts', () => {
     it('check autosuggest when user want to search an expert', () => {
         cy.get(".expert").click()
         cy.wait(10000)
-        cy.get(".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input").type("alix berton")
+        cy.get(".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input").type("sonu yadav")
         cy.get(".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input").type('{backspace}')
         cy.get(".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input").type('{backspace}')
         cy.get(".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input").type('{backspace}')
@@ -27,8 +27,8 @@ describe('experts', () => {
         cy.get(".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input").type('{backspace}')
         cy.get(".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input").type('{backspace}')
         cy.get(".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input").type('{backspace}')
-        cy.get(".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input").type('{backspace}')
-        cy.get(".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input").type('{backspace}')
+            // cy.get(".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input").type('{backspace}')
+            // cy.get(".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input").type('{backspace}')
         cy.wait(5000)
         cy.contains("span", "Next ").click()
         cy.wait(2000)
@@ -37,7 +37,19 @@ describe('experts', () => {
 
     })
 
+    it('check when user search expert by fee filter', () => {
+        cy.get(".expert").click()
+        cy.wait(10000)
+        cy.get(".MuiSlider-thumb")
+            // .invoke("val", 200)
+            .invoke("attr", "style", "left: 20%;")
+            .invoke("attr", "aria-valuenow", "600")
+            .trigger("change")
+            .click({ force: true })
 
+
+
+    })
 
     it('when user want to find expert with given filter ', () => {
 

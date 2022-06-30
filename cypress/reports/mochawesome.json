@@ -1,0 +1,149 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-06-29T12:47:06.915Z",
+    "end": "2022-06-29T12:47:39.353Z",
+    "duration": 32438,
+    "testsRegistered": 3,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 2,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "44a74d51-e276-49cc-9ec4-0f22be345386",
+      "title": "",
+      "fullFile": "cypress/e2e/ask_a_quetion.cy.js",
+      "file": "cypress/e2e/ask_a_quetion.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "96ecdbb1-6c0c-4fb4-8237-a98bd97fe4d0",
+          "title": "ask a question",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "check when user ask a question without required details.",
+              "fullTitle": "ask a question check when user ask a question without required details.",
+              "timedOut": null,
+              "duration": 26609,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Failed screenshot\",\n        \"value\": \"/ask_a_quetion.cy.js/ask a question -- check when user ask a question without required details -- before each hook (failed).png\"\n      }\n    ]\n  ]\n}",
+              "code": "cy.get('[style=\"margin-top: 6px; margin-left: 4px;\"] > a').click();\ncy.contains(\"span\", \"Post Question\").click();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `input[name=\"email\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `ask a question`",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `input[name=\"email\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `ask a question`\n    at Context.eval (https://community.insightmonk.com/__cypress/tests?p=cypress/e2e/ask_a_quetion.cy.js:103:8)",
+                "diff": null
+              },
+              "uuid": "54a79bed-a6cf-4910-abf2-b069aea9e108",
+              "parentUUID": "96ecdbb1-6c0c-4fb4-8237-a98bd97fe4d0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "check when user ask a question without select topic field .",
+              "fullTitle": "ask a question check when user ask a question without select topic field .",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[placeholder=\"Enter title\"]').type('Precision Medicine');\ncy.wait(3000);\ncy.get(\".ql-editor\").type(\"Testing message\");\ncy.get('[placeholder=\"Enter a value\"]').type('Precision Medicine');\nCypress.Commands.add('getDropdownOptions', () => {\n  return cy.get('.MuiAutocomplete-popper [role=\"listbox\"] [role=\"option\"]', {\n    timeout: 10000\n  });\n});\ncy.getDropdownOptions().contains('Precision medicine').click(); // cy.contains(\"span\", \"Post Question\").click()",
+              "err": {},
+              "uuid": "8b2df8dd-581e-4e96-9676-170c7566e6c7",
+              "parentUUID": "96ecdbb1-6c0c-4fb4-8237-a98bd97fe4d0",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "check when user ask a question without enter anything in body field .",
+              "fullTitle": "ask a question check when user ask a question without enter anything in body field .",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".jss194 > .MuiAutocomplete-root > .MuiFormControl-root > .MuiInputBase-root\").click();\nCypress.Commands.add('getDropdownOptions', () => {\n  return cy.get('.MuiAutocomplete-popper [role=\"listbox\"] [role=\"option\"]', {\n    timeout: 10000\n  });\n});\ncy.getDropdownOptions().contains('Precision Medicine').click();\ncy.wait(3000);\ncy.get(\".ql-editor\").clear(); // cy.contains(\"span\", \"Post Question\").click()",
+              "err": {},
+              "uuid": "46d70c28-66e8-4e01-9e70-00f5aac0a739",
+              "parentUUID": "96ecdbb1-6c0c-4fb4-8237-a98bd97fe4d0",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "54a79bed-a6cf-4910-abf2-b069aea9e108"
+          ],
+          "pending": [],
+          "skipped": [
+            "8b2df8dd-581e-4e96-9676-170c7566e6c7",
+            "46d70c28-66e8-4e01-9e70-00f5aac0a739"
+          ],
+          "duration": 26609,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

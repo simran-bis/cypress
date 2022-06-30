@@ -1,0 +1,163 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-06-29T13:04:49.705Z",
+    "end": "2022-06-29T13:06:24.061Z",
+    "duration": 94356,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "50290258-c2ec-49c8-b20d-e6db531a9c4f",
+      "title": "",
+      "fullFile": "cypress/e2e/liberary.cy.js",
+      "file": "cypress/e2e/liberary.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "eb390b94-62f3-4d6d-a4ec-0a630e2dc025",
+          "title": "liberary",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "check when user want to check  liberary and view saved reports of all documents",
+              "fullTitle": "liberary check when user want to check  liberary and view saved reports of all documents",
+              "timedOut": null,
+              "duration": 21754,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".my-library\").click();\ncy.contains('th', 'I nternational I ntegration & I mpacts').parent('tr').children('td').find('button').click();\ncy.wait(5000);\ncy.contains(\"span\", \"close\").click(); //for dropdown\n// cy.get(\"#demo-controlled-open-select\").click()\n// cy.wait(3000)\n// cy.contains('Public Resources').click()",
+              "err": {},
+              "uuid": "d968be58-a1bc-4df1-bbcc-2ad36af62585",
+              "parentUUID": "eb390b94-62f3-4d6d-a4ec-0a630e2dc025",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "when user want to view saved report of public source",
+              "fullTitle": "liberary when user want to view saved report of public source",
+              "timedOut": null,
+              "duration": 28920,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(6000);\ncy.get(\".my-library\").click();\ncy.get(\"#demo-controlled-open-select\").click();\ncy.contains('Public Resources').click();\ncy.wait(3000);\ncy.contains('th', 'I nternational I ntegration & I mpacts').parent('tr').children('td').find('button').click();\ncy.wait(5000);\ncy.contains(\"span\", \"close\").click();",
+              "err": {},
+              "uuid": "4090898f-c3ac-4f9a-b6fc-5e5835fefee8",
+              "parentUUID": "eb390b94-62f3-4d6d-a4ec-0a630e2dc025",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "when user want to view saved report of bis content",
+              "fullTitle": "liberary when user want to view saved report of bis content",
+              "timedOut": null,
+              "duration": 25487,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".my-library\").click();\ncy.get(\"#demo-controlled-open-select\").click();\ncy.contains('BIS Content').click();\ncy.wait(3000);\ncy.contains('th', 'Report Pharmacogenomics Market').parent('tr').children('td').find('button').first().click();\ncy.wait(5000);\ncy.contains(\"span\", \"close\").click();",
+              "err": {},
+              "uuid": "e7e5a642-3406-464e-9597-c19b0444513d",
+              "parentUUID": "eb390b94-62f3-4d6d-a4ec-0a630e2dc025",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "when user want to check transaction history",
+              "fullTitle": "liberary when user want to check transaction history",
+              "timedOut": null,
+              "duration": 14920,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".my-library\").click();\ncy.contains(\"span\", \"Transactions History\").click();",
+              "err": {},
+              "uuid": "386ec27a-66a9-4bfe-9428-49e53d9747f4",
+              "parentUUID": "eb390b94-62f3-4d6d-a4ec-0a630e2dc025",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d968be58-a1bc-4df1-bbcc-2ad36af62585",
+            "4090898f-c3ac-4f9a-b6fc-5e5835fefee8",
+            "e7e5a642-3406-464e-9597-c19b0444513d",
+            "386ec27a-66a9-4bfe-9428-49e53d9747f4"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 91081,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

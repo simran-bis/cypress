@@ -1,0 +1,187 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 4,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-06-29T12:53:34.728Z",
+    "end": "2022-06-29T12:56:24.021Z",
+    "duration": 169293,
+    "testsRegistered": 5,
+    "passPercent": 80,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5c5a790a-adc7-4afa-9554-ec757d514a1b",
+      "title": "",
+      "fullFile": "cypress/e2e/experts.cy.js",
+      "file": "cypress/e2e/experts.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2f23cec0-7355-4477-84ad-f2967d33cbe3",
+          "title": "experts",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "check autosuggest when user want to search an expert",
+              "fullTitle": "experts check autosuggest when user want to search an expert",
+              "timedOut": null,
+              "duration": 42283,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".expert\").click();\ncy.wait(10000);\ncy.get(\".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input\").type(\"sonu yadav\");\ncy.get(\".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input\").type('{backspace}');\ncy.get(\".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input\").type('{backspace}');\ncy.get(\".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input\").type('{backspace}');\ncy.get(\".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input\").type('{backspace}');\ncy.get(\".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input\").type('{backspace}');\ncy.get(\".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input\").type('{backspace}');\ncy.get(\".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input\").type('{backspace}');\ncy.get(\".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input\").type('{backspace}');\ncy.get(\".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input\").type('{backspace}'); // cy.get(\".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input\").type('{backspace}')\n// cy.get(\".MuiBox-root > .MuiInputBase-root > .MuiInputBase-input\").type('{backspace}')\ncy.wait(5000);\ncy.contains(\"span\", \"Next \").click();\ncy.wait(2000);\ncy.contains(\"span\", \"Next \").click();",
+              "err": {},
+              "uuid": "90a8e2de-937b-404c-88d8-8dd581908716",
+              "parentUUID": "2f23cec0-7355-4477-84ad-f2967d33cbe3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "check when user search expert by fee filter",
+              "fullTitle": "experts check when user search expert by fee filter",
+              "timedOut": null,
+              "duration": 26488,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".expert\").click();\ncy.wait(10000);\ncy.get(\".MuiSlider-thumb\") // .invoke(\"val\", 200)\n.invoke(\"attr\", \"style\", \"left: 20%;\").invoke(\"attr\", \"aria-valuenow\", \"600\").trigger(\"change\").click({\n  force: true\n});",
+              "err": {},
+              "uuid": "ce3370c8-1f82-4c43-9d0d-e7effbe2f2a5",
+              "parentUUID": "2f23cec0-7355-4477-84ad-f2967d33cbe3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "when user want to find expert with given filter ",
+              "fullTitle": "experts when user want to find expert with given filter ",
+              "timedOut": null,
+              "duration": 34925,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".expert\").click();\ncy.wait(8000);\ncy.get(\":nth-child(1) > #panel1bh-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root\").click();\ncy.get('[type=\"checkbox\"]').check('Precision Medicine');\ncy.wait(2000);\ncy.get('[type=\"checkbox\"]').check('Space Tech');\ncy.get(\":nth-child(2) > #panel1bh-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root\").click();\ncy.wait(2000);\ncy.get('[type=\"checkbox\"]').check('Healthcare');\ncy.get(\":nth-child(3) > #panel1bh-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root\").click();\ncy.wait(2000);\ncy.get('[type=\"checkbox\"]').check('United States');\ncy.get(\".MuiPaper-root.Mui-expanded > #panel1bh-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root\").click();",
+              "err": {},
+              "uuid": "da9f5433-95c9-4888-bc70-8861e3f80114",
+              "parentUUID": "2f23cec0-7355-4477-84ad-f2967d33cbe3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "check when user want to request for a consultation with searched expert ",
+              "fullTitle": "experts check when user want to request for a consultation with searched expert ",
+              "timedOut": null,
+              "duration": 15405,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Failed screenshot\",\n        \"value\": \"/experts.cy.js/experts -- check when user want to request for a consultation with searched expert (failed).png\"\n      }\n    ]\n  ]\n}",
+              "code": "cy.get(\".expert\").click();\ncy.get('[placeholder=\"Find Experts\"]').type('Sonu yadav');\ncy.wait(8000);\ncy.get(\".MuiGrid-justify-content-xs-center\").contains(\"h6\", \"Sonu\").click();\ncy.wait(5000);\ncy.contains(\"span\", \"Request a consultation\").click();\ncy.get(\":nth-child(1) > #panel1a-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root\").click();\ncy.get('[value=\"Idea discussion\"]').check();\ncy.wait(5000);\ncy.contains(\"span\", \"Next \").click();\ncy.get('[name=\"title\"]').type(\"testing testing\");\ncy.get('[placeholder=\"Enter project Description\"]').type(\"The resources of a microservice based applications can be manipulated in several ways. It is possible to create, update, delete them, and do other operations as well.\");\ncy.contains(\"span\", \"Next \").click();\ncy.contains(\"span\", \"Within a week\").click();\ncy.contains(\"span\", \"Next \").click();",
+              "err": {
+                "message": "CypressError: `cy.type()` failed because it targeted a disabled element.\n\nThe element typed into was:\n\n  > <input placeholder=\"Find Experts\" type=\"text\" class=\"MuiInputBase-input jss184\" value=\"\">\n\nEnsure the element does not have an attribute named `disabled` before typing into it.\n\nhttps://on.cypress.io/type",
+                "estack": "CypressError: `cy.type()` failed because it targeted a disabled element.\n\nThe element typed into was:\n\n  > <input placeholder=\"Find Experts\" type=\"text\" class=\"MuiInputBase-input jss184\" value=\"\">\n\nEnsure the element does not have an attribute named `disabled` before typing into it.\n\nhttps://on.cypress.io/type\n    at https://demo.insightmonk.com/__cypress/runner/cypress_runner.js:152261:86\n    at tryCatcher (https://demo.insightmonk.com/__cypress/runner/cypress_runner.js:13012:23)\n    at Promise._settlePromiseFromHandler (https://demo.insightmonk.com/__cypress/runner/cypress_runner.js:10947:31)\n    at Promise._settlePromise (https://demo.insightmonk.com/__cypress/runner/cypress_runner.js:11004:18)\n    at Promise._settlePromise0 (https://demo.insightmonk.com/__cypress/runner/cypress_runner.js:11049:10)\n    at Promise._settlePromises (https://demo.insightmonk.com/__cypress/runner/cypress_runner.js:11129:18)\n    at _drainQueueStep (https://demo.insightmonk.com/__cypress/runner/cypress_runner.js:7719:12)\n    at _drainQueue (https://demo.insightmonk.com/__cypress/runner/cypress_runner.js:7712:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://demo.insightmonk.com/__cypress/runner/cypress_runner.js:7728:5)\n    at Async.drainQueues (https://demo.insightmonk.com/__cypress/runner/cypress_runner.js:7598:14)\nFrom Your Spec Code:\n    at Context.eval (https://demo.insightmonk.com/__cypress/tests?p=cypress/e2e/experts.cy.js:161:44)",
+                "diff": null
+              },
+              "uuid": "54bfee11-e608-4677-8584-6c88ba7561d1",
+              "parentUUID": "2f23cec0-7355-4477-84ad-f2967d33cbe3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "check when expert not found and user want to put a project for consultation",
+              "fullTitle": "experts check when expert not found and user want to put a project for consultation",
+              "timedOut": null,
+              "duration": 46659,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".expert\").click();\ncy.get('[placeholder=\"Find Experts\"]').type('Rohan yadav');\ncy.wait(8000);\ncy.contains(\"b\", \"Click to Book a Consultation\").click();\ncy.get(\".MuiInputBase-root\").click({\n  multiple: true\n});\nCypress.Commands.add('getDropdownOptions', () => {\n  return cy.get('.MuiAutocomplete-popper [role=\"listbox\"] [role=\"option\"]', {\n    timeout: 10000\n  });\n});\ncy.getDropdownOptions().contains('Precision Medicine').click();\ncy.get(\".MuiCardActions-root > .MuiGrid-container > :nth-child(2) > .MuiButtonBase-root\").click();\ncy.get(\":nth-child(1) > #panel1a-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root\").click();\ncy.get('[value=\"Idea discussion\"]').check();\ncy.wait(5000);\ncy.contains(\"span\", \"Next \").click();\ncy.get('[name=\"title\"]').type(\"testing testing\");\ncy.get('[placeholder=\"Enter project Description\"]').type(\"The resources of a microservice based applications can be manipulated in several ways. It is possible to create, update, delete them, and do other operations as well.\");\ncy.contains(\"span\", \"Next \").click();\ncy.get('[placeholder=\"Enter budget in $\"]').type(\"200\");\ncy.contains(\"span\", \"Within a week\").click();\ncy.contains(\"span\", \"Next \").click();",
+              "err": {},
+              "uuid": "261bc35c-d889-4944-87b4-e27fe59c0450",
+              "parentUUID": "2f23cec0-7355-4477-84ad-f2967d33cbe3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "90a8e2de-937b-404c-88d8-8dd581908716",
+            "ce3370c8-1f82-4c43-9d0d-e7effbe2f2a5",
+            "da9f5433-95c9-4888-bc70-8861e3f80114",
+            "261bc35c-d889-4944-87b4-e27fe59c0450"
+          ],
+          "failures": [
+            "54bfee11-e608-4677-8584-6c88ba7561d1"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 165760,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

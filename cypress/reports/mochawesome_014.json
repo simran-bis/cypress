@@ -1,0 +1,130 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-06-29T13:13:16.770Z",
+    "end": "2022-06-29T13:14:27.215Z",
+    "duration": 70445,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1571c7d5-a261-4c63-bf7e-87fc4a00e953",
+      "title": "",
+      "fullFile": "cypress/e2e/public_sources.cy.js",
+      "file": "cypress/e2e/public_sources.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "dbade2da-1097-4495-a162-ecc533dfb7da",
+          "title": "public sources",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "check when user want to check ahare,download and add to liberary.",
+              "fullTitle": "public sources check when user want to check ahare,download and add to liberary.",
+              "timedOut": null,
+              "duration": 32574,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Failed screenshot\",\n        \"value\": \"/public_sources.cy.js/public sources -- check when user want to check ahare,download and add to liberary (failed).png\"\n      }\n    ]\n  ]\n}",
+              "code": "cy.get(\".report\").click();\ncy.wait(6000);\ncy.contains('span', 'Public Sources').click();\ncy.wait(5000);\ncy.get(\"#long-button\").click();\ncy.contains(\"li\", \"Add to Library\").click();\ncy.wait(8000);\ncy.get('body').click(0, 0);\ncy.get(\"#long-button\").click();\ncy.contains(\"li\", \"Share\").click();\ncy.wait(3000);\ncy.get('.MuiGrid-justify-content-xs-flex-end > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root > path').click();\ncy.contains('span', 'View').first().click();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#long-button`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#long-button`, but never found it.\n    at Context.eval (https://demo.insightmonk.com/__cypress/tests?p=cypress/e2e/public_sources.cy.js:120:8)",
+                "diff": null
+              },
+              "uuid": "fcbcd3ce-07de-44fb-99ee-da0e83a19436",
+              "parentUUID": "dbade2da-1097-4495-a162-ecc533dfb7da",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "check when user want to check reports by filter",
+              "fullTitle": "public sources check when user want to check reports by filter",
+              "timedOut": null,
+              "duration": 34064,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".report\").click();\ncy.wait(6000);\ncy.contains('span', 'Public Sources').click();\ncy.wait(8000); //date range\ncy.get(\".MuiSelect-root\").click();\ncy.contains(\"li\", \"Last 2 Weeks\").click();\ncy.wait(5000);\ncy.get(\":nth-child(3) > .MuiAccordionSummary-root > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root\").click();\ncy.get('[placeholder=\"Search\"]').eq(0).type(\"Company Reports\");\ncy.wait(2000);\ncy.get(\".MuiIconButton-colorSecondary\").first().click();\ncy.wait(2000);\ncy.get(\":nth-child(4) > .MuiAccordionSummary-root > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root\").click(); // cy.get('[placeholder=\"Search\"]').eq(1).type(\"North America\")\n// Cypress.Commands.add('getDropdownOptions', () => {\n//     return cy.get('.MuiAutocomplete-popper [role=\"listbox\"] [role=\"option\"]', {\n//         timeout: 10000,\n//     });\n// });\n// cy.getDropdownOptions().find(\".MuiSvgIcon-root\", ).click();\n// cy.wait(2000)",
+              "err": {},
+              "uuid": "1dfdddca-9c01-407c-b05d-4eb8ab77e520",
+              "parentUUID": "dbade2da-1097-4495-a162-ecc533dfb7da",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1dfdddca-9c01-407c-b05d-4eb8ab77e520"
+          ],
+          "failures": [
+            "fcbcd3ce-07de-44fb-99ee-da0e83a19436"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 66638,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

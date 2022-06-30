@@ -1,0 +1,125 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-06-29T13:11:36.784Z",
+    "end": "2022-06-29T13:12:56.439Z",
+    "duration": 79655,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "066b4b68-3e3d-4892-bb68-fcc0b93dfc21",
+      "title": "",
+      "fullFile": "cypress/e2e/profile.cy.js",
+      "file": "cypress/e2e/profile.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f0887fe0-8864-4948-8871-9f7025bc5750",
+          "title": "profile",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "check when user want to check my profile and change password.",
+              "fullTitle": "profile check when user want to check my profile and change password.",
+              "timedOut": null,
+              "duration": 40513,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(6000);\ncy.get(\".MuiButton-label > .MuiAvatar-root\").click();\ncy.wait(2000);\ncy.contains(\"span\", \"My Profile\").click();\ncy.wait(6000);\ncy.contains(\"span\", \"Change password\").click();\ncy.get('input[name=\"oldPassword\"]').type('bis@1234');\ncy.get('input[name=\"newPassWord\"]').type('bis@123456');\ncy.get('input[name=\"confirmPassword\"]').type('bis@123456');\ncy.wait(2000);\ncy.contains(\"span\", \"Cancel\").click();",
+              "err": {},
+              "uuid": "41b9c7e8-1452-4cb3-9ef2-31e25102fae4",
+              "parentUUID": "f0887fe0-8864-4948-8871-9f7025bc5750",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "when user want to edit profile",
+              "fullTitle": "profile when user want to edit profile",
+              "timedOut": null,
+              "duration": 35993,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(3000);\ncy.get(\".MuiButton-label > .MuiAvatar-root\").click();\ncy.wait(2000);\ncy.contains(\"span\", \"Edit Profile\").click();\ncy.wait(5000);\ncy.get('input[name=\"name\"]').clear();\ncy.get('input[name=\"name\"]').type('simran simran');\ncy.get('input[name=\"zip\"]').clear();\ncy.get('input[name=\"zip\"]').type('120087'); // const input = cy.get('input[value=\"+91\"]')\n// const flag = cy.get(\".selected-flag\")\n// if (input === \"\" && flag === \"\") {\n//     cy.log(\"blank\")\n//     cy.get(\".arrow\").click()\n//     cy.contains(\"span\", \"+91\").click()\n//     cy.get('input[value=\"+91\"]').type('8920669876')\n//     cy.wait(2000)\n// }\ncy.contains(\"span\", \"Save\");\ncy.wait(2000);",
+              "err": {},
+              "uuid": "c70b7c3e-431d-4c83-adde-19bbdb5bc32b",
+              "parentUUID": "f0887fe0-8864-4948-8871-9f7025bc5750",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "41b9c7e8-1452-4cb3-9ef2-31e25102fae4",
+            "c70b7c3e-431d-4c83-adde-19bbdb5bc32b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 76506,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

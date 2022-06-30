@@ -37,17 +37,27 @@ describe('profile', () => {
         cy.wait(2000)
         cy.contains("span", "Edit Profile").click()
         cy.wait(5000)
-        const input = cy.get('input[value="+91"]')
-        const flag = cy.get(".selected-flag")
-        if (input === "" && flag === "") {
-            cy.log("blank")
-            cy.get(".arrow").click()
-            cy.contains("span", "+91").click()
-            cy.get('input[value="+91"]').type('8920669876')
-            cy.wait(2000)
-        }
+        cy.get('input[name="name"]').clear()
+
+        cy.get('input[name="name"]').type('simran simran')
+        cy.get('input[name="zip"]').clear()
+
+        cy.get('input[name="zip"]').type('120087')
+
+
+        // const input = cy.get('input[value="+91"]')
+        // const flag = cy.get(".selected-flag")
+        // if (input === "" && flag === "") {
+        //     cy.log("blank")
+        //     cy.get(".arrow").click()
+        //     cy.contains("span", "+91").click()
+        //     cy.get('input[value="+91"]').type('8920669876')
+        //     cy.wait(2000)
+        // }
 
         cy.contains("span", "Save")
+        cy.wait(2000)
+
 
 
 

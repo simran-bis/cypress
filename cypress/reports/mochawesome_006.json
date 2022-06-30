@@ -1,0 +1,125 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-06-29T13:03:47.253Z",
+    "end": "2022-06-29T13:04:37.047Z",
+    "duration": 49794,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "55fc00b7-6d5c-427c-80d9-0f46fc4c76a9",
+      "title": "",
+      "fullFile": "cypress/e2e/homepage_filter.cy.js",
+      "file": "cypress/e2e/homepage_filter.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c1a42796-174d-44c6-9322-37ae2ad3a9fa",
+          "title": "homepage_filter",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "check when user want to filter accepted answer.",
+              "fullTitle": "homepage_filter check when user want to filter accepted answer.",
+              "timedOut": null,
+              "duration": 24310,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(5000);\ncy.get(\":nth-child(2) > #panel2bh-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root\").click();\ncy.get('[type=\"checkbox\"]').check('ACCEPTED_ANSWERS'); //uncheck selected \ncy.wait(5000);\ncy.get('[type=\"checkbox\"]').uncheck('ACCEPTED_ANSWERS');\ncy.get(\".MuiPaper-root.Mui-expanded > #panel2bh-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root\").click();",
+              "err": {},
+              "uuid": "c09eb09b-0f9e-4f73-b2c3-82217261067a",
+              "parentUUID": "c1a42796-174d-44c6-9322-37ae2ad3a9fa",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "check when user want to select topic, sector and select most answered ",
+              "fullTitle": "homepage_filter check when user want to select topic, sector and select most answered ",
+              "timedOut": null,
+              "duration": 22508,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\":nth-child(3) > #panel2bh-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root\").click();\ncy.wait(2000);\ncy.get('[type=\"checkbox\"]').check('Precision Medicine');\ncy.wait(2000);\ncy.get('[type=\"checkbox\"]').check('Space Tech'); //selected sector\ncy.get(\":nth-child(4) > #panel2bh-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root\").click();\ncy.wait(2000);\ncy.get('[type=\"checkbox\"]').check('Automotive');\ncy.get(\":nth-child(5) > #panel2bh-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root\").click();\ncy.wait(2000);\ncy.get('[value=\"MOST_ANSWERED\"]').check();",
+              "err": {},
+              "uuid": "c174eefd-9f85-449b-8eb8-84c0e8ff180f",
+              "parentUUID": "c1a42796-174d-44c6-9322-37ae2ad3a9fa",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c09eb09b-0f9e-4f73-b2c3-82217261067a",
+            "c174eefd-9f85-449b-8eb8-84c0e8ff180f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 46818,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

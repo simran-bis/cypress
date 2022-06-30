@@ -1,0 +1,201 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-06-29T13:20:26.155Z",
+    "end": "2022-06-29T13:22:16.127Z",
+    "duration": 109972,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5f15df25-3478-4807-8362-dac49d00073c",
+      "title": "",
+      "fullFile": "cypress/e2e/signup.cy.js",
+      "file": "cypress/e2e/signup.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e7fa08e5-a709-43ca-8518-a7c9d9ab75bc",
+          "title": "signup test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "when user enter all valid details for signup",
+              "fullTitle": "signup test when user enter all valid details for signup",
+              "timedOut": null,
+              "duration": 20908,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://demo.insightmonk.com/discover');\ncy.wait(7000);\ncy.contains(\"span\", \"Sign Up\").click();\ncy.contains(\"span\", \"Join as a user\").click();\ncy.get('input[name=\"firstName\"]').type(\"simran\");\ncy.get('input[name=\"lastName\"]').type(\"bhalla\");\ncy.get('input[name=\"email\"]').type(\"bhalla.simran297+127@gmail.com\");\ncy.get('input[name=\"password\"]').type(\"bis@1998\");\ncy.get('input[name=\"confirmPassword\"]').type(\"bis@1998\");\ncy.get('[type=\"checkbox\"]').first().check();\ncy.contains(\"span\", \"Sign Up\").click();",
+              "err": {},
+              "uuid": "7f8ae3b1-312e-463d-ba40-526cab8408e5",
+              "parentUUID": "e7fa08e5-a709-43ca-8518-a7c9d9ab75bc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "when user enter differt confirm password",
+              "fullTitle": "signup test when user enter differt confirm password",
+              "timedOut": null,
+              "duration": 16765,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://demo.insightmonk.com/discover');\ncy.wait(7000);\ncy.contains(\"span\", \"Sign Up\").click();\ncy.contains(\"span\", \"Join as a user\").click();\ncy.get('input[name=\"firstName\"]').type(\"simran\");\ncy.get('input[name=\"lastName\"]').type(\"bhalla\");\ncy.get('input[name=\"email\"]').type(\"bhalla.simran297+127@gmail.com\");\ncy.get('input[name=\"password\"]').type(\"bis@1998\");\ncy.get('input[name=\"confirmPassword\"]').type(\"bis@1990\");\ncy.get('[type=\"checkbox\"]').first().check();\ncy.contains(\"span\", \"Sign Up\").click();",
+              "err": {},
+              "uuid": "12cea798-54d0-4d08-b050-957eeeae16c7",
+              "parentUUID": "e7fa08e5-a709-43ca-8518-a7c9d9ab75bc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "when user do not enter lastname",
+              "fullTitle": "signup test when user do not enter lastname",
+              "timedOut": null,
+              "duration": 16019,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://demo.insightmonk.com/discover');\ncy.wait(7000);\ncy.contains(\"span\", \"Sign Up\").click();\ncy.contains(\"span\", \"Join as a user\").click();\ncy.get('input[name=\"firstName\"]').type(\"simran\"); // cy.get('input[name=\"lastName\"]').type(\"bhalla\")\ncy.get('input[name=\"email\"]').type(\"bhalla.simran297+127@gmail.com\");\ncy.get('input[name=\"password\"]').type(\"bis@1998\");\ncy.get('input[name=\"confirmPassword\"]').type(\"bis@1998\");\ncy.get('[type=\"checkbox\"]').first().check();\ncy.contains(\"span\", \"Sign Up\").click();",
+              "err": {},
+              "uuid": "39b73608-d13f-493a-a46a-bf8ed55f3321",
+              "parentUUID": "e7fa08e5-a709-43ca-8518-a7c9d9ab75bc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "when user enter incorrect email id",
+              "fullTitle": "signup test when user enter incorrect email id",
+              "timedOut": null,
+              "duration": 17714,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://demo.insightmonk.com/discover');\ncy.wait(7000);\ncy.contains(\"span\", \"Sign Up\").click();\ncy.contains(\"span\", \"Join as a user\").click();\ncy.get('input[name=\"firstName\"]').type(\"simran\");\ncy.get('input[name=\"lastName\"]').type(\"bhalla\");\ncy.get('input[name=\"email\"]').type(\"bhalla.simran297+127gmail.com\");\ncy.get('input[name=\"password\"]').type(\"bis@1998\");\ncy.get('input[name=\"confirmPassword\"]').type(\"bis@1998\");\ncy.get('[type=\"checkbox\"]').first().check();\ncy.contains(\"span\", \"Sign Up\").click();",
+              "err": {},
+              "uuid": "d7e7ad08-0edf-4f06-8023-c636d92f530e",
+              "parentUUID": "e7fa08e5-a709-43ca-8518-a7c9d9ab75bc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "when user enter password lessthan max length",
+              "fullTitle": "signup test when user enter password lessthan max length",
+              "timedOut": null,
+              "duration": 17754,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://demo.insightmonk.com/discover');\ncy.wait(7000);\ncy.contains(\"span\", \"Sign Up\").click();\ncy.contains(\"span\", \"Join as a user\").click();\ncy.get('input[name=\"firstName\"]').type(\"simran\");\ncy.get('input[name=\"lastName\"]').type(\"bhalla\");\ncy.get('input[name=\"email\"]').type(\"bhalla.simran297+127@gmail.com\");\ncy.get('input[name=\"password\"]').type(\"bis\");\ncy.get('input[name=\"confirmPassword\"]').type(\"bis\");\ncy.get('[type=\"checkbox\"]').first().check();\ncy.contains(\"span\", \"Sign Up\").click();",
+              "err": {},
+              "uuid": "62bbd61e-f936-4e95-985b-1b70e921af20",
+              "parentUUID": "e7fa08e5-a709-43ca-8518-a7c9d9ab75bc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "when user do not check on tearms and policy checkbox",
+              "fullTitle": "signup test when user do not check on tearms and policy checkbox",
+              "timedOut": null,
+              "duration": 17633,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://demo.insightmonk.com/discover');\ncy.wait(7000);\ncy.contains(\"span\", \"Sign Up\").click();\ncy.contains(\"span\", \"Join as a user\").click();\ncy.get('input[name=\"firstName\"]').type(\"simran\");\ncy.get('input[name=\"lastName\"]').type(\"bhalla\");\ncy.get('input[name=\"email\"]').type(\"bhalla.simran297+127@gmail.com\");\ncy.get('input[name=\"password\"]').type(\"bis@1998\");\ncy.get('input[name=\"confirmPassword\"]').type(\"bis@1998\");\ncy.contains(\"span\", \"Sign Up\").click();",
+              "err": {},
+              "uuid": "0c01c2cc-81b9-4d91-8ad8-d11381a9aed7",
+              "parentUUID": "e7fa08e5-a709-43ca-8518-a7c9d9ab75bc",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7f8ae3b1-312e-463d-ba40-526cab8408e5",
+            "12cea798-54d0-4d08-b050-957eeeae16c7",
+            "39b73608-d13f-493a-a46a-bf8ed55f3321",
+            "d7e7ad08-0edf-4f06-8023-c636d92f530e",
+            "62bbd61e-f936-4e95-985b-1b70e921af20",
+            "0c01c2cc-81b9-4d91-8ad8-d11381a9aed7"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 106793,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

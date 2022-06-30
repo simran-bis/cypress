@@ -1,0 +1,163 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-06-29T13:19:22.156Z",
+    "end": "2022-06-29T13:20:13.408Z",
+    "duration": 51252,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "876e43df-6633-435a-b90b-eb400c12d504",
+      "title": "",
+      "fullFile": "cypress/e2e/signin.cy.js",
+      "file": "cypress/e2e/signin.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "620ed891-9d8c-4d37-9f62-b8b9c931267c",
+          "title": "sign in",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "when user enter signin button without enter any details",
+              "fullTitle": "sign in when user enter signin button without enter any details",
+              "timedOut": null,
+              "duration": 14087,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://demo.insightmonk.com/discover');\ncy.clearCookies({\n  log: true\n});\ncy.clearLocalStorage({\n  log: true\n});\ncy.contains(\"span\", \"Login\").click();\ncy.contains(\"span\", \"Sign In\").click();\ncy.wait(5000);",
+              "err": {},
+              "uuid": "f6d0bbfe-3c0b-4594-b36b-c9430321008c",
+              "parentUUID": "620ed891-9d8c-4d37-9f62-b8b9c931267c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "when user login with correct credentials",
+              "fullTitle": "sign in when user login with correct credentials",
+              "timedOut": null,
+              "duration": 11994,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://demo.insightmonk.com/discover');\ncy.clearCookies({\n  log: true\n});\ncy.clearLocalStorage({\n  log: true\n});\ncy.contains(\"span\", \"Login\").click();\ncy.get('input[name=\"email\"]').type(\"bhalla.simran297@gmail.com\");\ncy.get('input[name=\"password\"]').type(\"bis@1998\");\ncy.contains(\"span\", \"Sign In\").click();\ncy.wait(5000);",
+              "err": {},
+              "uuid": "d3fbe272-cf55-4f89-a7f5-8b2427d6cb08",
+              "parentUUID": "620ed891-9d8c-4d37-9f62-b8b9c931267c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "when user login with invalid email",
+              "fullTitle": "sign in when user login with invalid email",
+              "timedOut": null,
+              "duration": 10788,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://demo.insightmonk.com/discover');\ncy.clearCookies({\n  log: true\n});\ncy.clearLocalStorage({\n  log: true\n});\ncy.contains(\"span\", \"Login\").click();\ncy.get('input[name=\"email\"]').type(\"bhalla.simran29@gmail.com\");\ncy.get('input[name=\"password\"]').type(\"bis@1998\");\ncy.contains(\"span\", \"Sign In\").click();\ncy.wait(5000);",
+              "err": {},
+              "uuid": "f24f893a-caa5-4ebe-b13d-059f794cf58a",
+              "parentUUID": "620ed891-9d8c-4d37-9f62-b8b9c931267c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "when user login with invalid password ",
+              "fullTitle": "sign in when user login with invalid password ",
+              "timedOut": null,
+              "duration": 11302,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://demo.insightmonk.com/discover');\ncy.clearCookies({\n  log: true\n});\ncy.clearLocalStorage({\n  log: true\n});\ncy.contains(\"span\", \"Login\").click();\ncy.get('input[name=\"email\"]').type(\"bhalla.simran297@gmail.com\");\ncy.get('input[name=\"password\"]').type(\"bis@1994\");\ncy.contains(\"span\", \"Sign In\").click();\ncy.wait(5000);",
+              "err": {},
+              "uuid": "58c35dec-098a-4eac-86cd-a46c78430b38",
+              "parentUUID": "620ed891-9d8c-4d37-9f62-b8b9c931267c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f6d0bbfe-3c0b-4594-b36b-c9430321008c",
+            "d3fbe272-cf55-4f89-a7f5-8b2427d6cb08",
+            "f24f893a-caa5-4ebe-b13d-059f794cf58a",
+            "58c35dec-098a-4eac-86cd-a46c78430b38"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 48171,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

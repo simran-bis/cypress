@@ -21,6 +21,8 @@ describe('reports', () => {
     it('check when user want to check reports by date range.', () => {
         cy.wait(2000)
         cy.get(".report").click()
+        cy.wait(2000)
+
         cy.get(".MuiSelect-root").click()
         cy.contains("li", "Last 2 years").click()
         cy.wait(5000)
@@ -104,17 +106,12 @@ describe('reports', () => {
 
     it('check when user want to filter reports by sector and report types', () => {
         cy.get(".report").click()
+        cy.wait(8000)
         cy.get(":nth-child(2) > #panel1bh-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root").click()
+        cy.get('[type="checkbox"').check("Agriculture and Food Tech")
         cy.wait(6000)
-        cy.get('[type="checkbox"]').check("Agriculture and Food Tech")
-        cy.wait(7000)
-        cy.get(".MuiPaper-root.Mui-expanded > #panel1bh-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root").click()
         cy.get(":nth-child(3) > #panel1bh-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root").click()
-        cy.contains("span", "Company Profile").click()
-        cy.wait(6000)
-        cy.contains("span", "View").first().click()
-        cy.wait(6000)
-        cy.contains("span", "close").click()
+        cy.get('[value="Sections"]').check()
     })
 
 })

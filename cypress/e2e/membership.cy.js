@@ -1,6 +1,8 @@
-describe('ask a question', () => {
+describe('membership', () => {
 
     before(() => {
+        cy.viewport(1200, 1000)
+
         cy.visit('https://demo.insightmonk.com/discover')
         cy.clearCookies({ log: true })
         cy.clearLocalStorage({ log: true })

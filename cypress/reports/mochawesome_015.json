@@ -1,0 +1,125 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-06-29T13:14:44.472Z",
+    "end": "2022-06-29T13:15:41.095Z",
+    "duration": 56623,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ef345294-e830-4bd3-b8d5-e5114f174148",
+      "title": "",
+      "fullFile": "cypress/e2e/reports.cy.js",
+      "file": "cypress/e2e/reports.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8abe8a12-871e-4f2d-890a-cb147cbd88da",
+          "title": "reports",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "check when user want to check reports by date range.",
+              "fullTitle": "reports check when user want to check reports by date range.",
+              "timedOut": null,
+              "duration": 24210,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(2000);\ncy.get(\".report\").click();\ncy.wait(2000);\ncy.get(\".MuiSelect-root\").click();\ncy.contains(\"li\", \"Last 2 years\").click();\ncy.wait(5000); // cy.get(\":nth-child(2) > #panel1bh-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root\").click()\n// cy.wait(6000)\n// cy.get('[type=\"checkbox\"]').check(\"Agriculture and Food Tech\")\n// cy.wait(7000)\n// cy.get(\".MuiPaper-root.Mui-expanded > #panel1bh-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root\").click()\n// cy.get(\":nth-child(3) > #panel1bh-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root\").click()\n// cy.contains(\"span\", \"Company Profile\").click()\n// cy.wait(6000)\n// cy.contains(\"span\", \"View\").first().click()\n// cy.wait(6000)\n// cy.contains(\"span\", \"close\").click()\n// cy.contains(\"span\", \"Full Report\").click()\n// cy.wait(8000)\n// cy.contains(\"span\", \"Public Sources\").click()\n// cy.wait(8000)\n// cy.get(\".MuiSelect-root\").click()\n// cy.contains(\"li\", \"Last Month\").click()\n// cy.get(\":nth-child(3) > .MuiAccordionSummary-root > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root\").click()\n// cy.wait(6000)\n// cy.get('[placeholder=\"Search\"]').eq(0).type(\"Company Reports\")\n// cy.get('[type=\"checkbox\"]').first().check()\n// cy.wait(6000)\n// cy.get(\":nth-child(4) > .MuiAccordionSummary-root > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root\").click()\n// cy.wait(6000)\n// cy.get(\"#long-button\").first().click()\n// cy.contains(\"li\", \"Share\").click()\n// cy.wait(2000)\n// cy.get(\".MuiGrid-justify-content-xs-flex-end > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root\").click()\n// cy.wait(2000)\n// cy.get(\"#long-button\").first().click()\n// cy.contains(\"li\", \"Add to Library\").click()\n// cy.wait(5000)\n// cy.get('body').click(0, 0);\n// cy.contains(\"span\", \"View\").click()\n// cy.wait(\"3000\")\n// cy.get('body').click(0, 0);\n// cy.get(\"#panel1a-header\").click()\n// cy.get('[placeholder=\"Search\"]').eq(1).type(\"North America\")\n// cy.wait(6000)\n//[@id=\"__next\"]/div/div/div/div[3]/div/div[4]/div[2]/div/div/div/div/fieldset/div/label[1]/span[2]\n// cy.get(\":nth-child(3) > .MuiAccordionSummary-root > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root\").click()\n// cy.get('[placeholder=\"Search\"]').eq(0).type(\"Investor presentation (674)\")\n// cy.wait(8000)\n// cy.get('[type=\"checkbox\"]').check(\"INVESTOR_PRESENTATION\")\n// cy.wait(8000)\n// Cypress.Commands.add('getDropdownOptions', () => {\n//     return cy.get('.MuiAutocomplete-popper [role=\"listbox\"] [role=\"option\"]', {\n//         timeout: 10000,\n//     });\n// });\n// cy.getDropdownOptions().contains('Precision Medicine').click();\n// cy.contains(\"span\", \"View\").first().click()\n// cy.contains('.MuiGrid-root', 'cypress').within(() => {\n//     cy.get('MuiSvgIcon-root').click() // 1st button is edit\n// })\n//more icon\n// cy.get('.jss373 > .jss375 > .MuiGrid-wrap-xs-nowrap > :nth-child(1) > .MuiGrid-spacing-xs-2 > .MuiGrid-grid-xs-true > [style=\"flex-wrap: initial;\"] > [style=\"margin-top: -10px;\"] > #long-button > .MuiIconButton-label > .MuiSvgIcon-root').click()\n//     // cy.get('svg.MuiSvgIcon-root').eq(1).click() //clicks the first svg icon\n// cy.contains(\"li\", \"Add to Library\").click()\n// cy.wait(8000)\n// cy.contains(\"li\", \"Share\").click()\n// cy.get('.MuiGrid-justify-content-xs-flex-end > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root > path').click()",
+              "err": {},
+              "uuid": "77a20e46-48c8-4eea-8e75-2daa84feed80",
+              "parentUUID": "8abe8a12-871e-4f2d-890a-cb147cbd88da",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "check when user want to filter reports by sector and report types",
+              "fullTitle": "reports check when user want to filter reports by sector and report types",
+              "timedOut": null,
+              "duration": 29173,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".report\").click();\ncy.wait(8000);\ncy.get(\":nth-child(2) > #panel1bh-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root\").click();\ncy.get('[type=\"checkbox\"').check(\"Agriculture and Food Tech\");\ncy.wait(6000);\ncy.get(\":nth-child(3) > #panel1bh-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root\").click();\ncy.get('[value=\"Sections\"]').check();",
+              "err": {},
+              "uuid": "4ea27cd1-ea15-43da-9750-ea1f3b3ebabc",
+              "parentUUID": "8abe8a12-871e-4f2d-890a-cb147cbd88da",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "77a20e46-48c8-4eea-8e75-2daa84feed80",
+            "4ea27cd1-ea15-43da-9750-ea1f3b3ebabc"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 53383,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

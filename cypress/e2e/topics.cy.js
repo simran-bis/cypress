@@ -1,4 +1,4 @@
-describe('post answer', () => {
+describe('topics', () => {
 
     beforeEach(() => {
         cy.visit('https://demo.insightmonk.com/discover')
@@ -15,7 +15,7 @@ describe('post answer', () => {
     })
 
 
-    it('check when user want to follow topic', () => {
+    it('check when user want to click on total questions link', () => {
 
         cy.get(".topic").click()
         cy.wait(8000)
@@ -25,7 +25,7 @@ describe('post answer', () => {
 
 
     })
-    it('check when user want to unfollow topic', () => {
+    it('check when user want to click on total experts link', () => {
 
         cy.get(".topic").click()
         cy.wait(8000)
@@ -34,7 +34,7 @@ describe('post answer', () => {
             // cy.go('back')
 
     })
-    it('check when user want to unfollow topic', () => {
+    it('check when user want to follow topic', () => {
 
         cy.get(".topic").click()
         cy.wait(8000)
@@ -42,7 +42,7 @@ describe('post answer', () => {
 
 
     })
-    it('check when user want to unfollow topic', () => {
+    it('check when user want to unfollow  followed topic', () => {
 
         cy.get(".topic").click()
         cy.wait(8000)

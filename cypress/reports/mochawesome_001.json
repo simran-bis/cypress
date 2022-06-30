@@ -1,0 +1,248 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 8,
+    "passes": 6,
+    "pending": 0,
+    "failures": 2,
+    "start": "2022-06-29T12:47:49.504Z",
+    "end": "2022-06-29T12:52:43.828Z",
+    "duration": 294324,
+    "testsRegistered": 8,
+    "passPercent": 75,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2be629b5-9331-4f2d-a39e-417af5bb4329",
+      "title": "",
+      "fullFile": "cypress/e2e/discover_search.cy.js",
+      "file": "cypress/e2e/discover_search.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3dc34b7a-2534-487b-b22d-4a819f43052b",
+          "title": "discover search",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "check when user enter nothing and press enter button.",
+              "fullTitle": "discover search check when user enter nothing and press enter button.",
+              "timedOut": null,
+              "duration": 20538,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(3000);\ncy.get('input[placeholder=\"Find Answers for your Deeptech Questions\"]').type('{enter}');\ncy.wait(8000);",
+              "err": {},
+              "uuid": "54cab811-c585-49a5-b387-59357f4773c1",
+              "parentUUID": "3dc34b7a-2534-487b-b22d-4a819f43052b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "check Typing  characters in the search box, it should show suggestions starting with the entered character.",
+              "fullTitle": "discover search check Typing  characters in the search box, it should show suggestions starting with the entered character.",
+              "timedOut": null,
+              "duration": 20143,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(3000);\ncy.get('input[placeholder=\"Find Answers for your Deeptech Questions\"]').type('pre');\ncy.wait(8000);",
+              "err": {},
+              "uuid": "b813c1e5-713d-4d06-8357-5361001dd26a",
+              "parentUUID": "3dc34b7a-2534-487b-b22d-4a819f43052b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "check when user search with exact keyword and press enter.",
+              "fullTitle": "discover search check when user search with exact keyword and press enter.",
+              "timedOut": null,
+              "duration": 37974,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(3000);\ncy.get('input[placeholder=\"Find Answers for your Deeptech Questions\"]').type('precision medicine{enter}');\ncy.wait(8000);\ncy.contains('span', 'Reports').click();\ncy.wait(8000);\ncy.contains('span', 'Q&A').click();\ncy.wait(8000);",
+              "err": {},
+              "uuid": "da4b8d14-bbba-4a64-9e96-6063aeaace07",
+              "parentUUID": "3dc34b7a-2534-487b-b22d-4a819f43052b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "check when user want to view and share public sources.",
+              "fullTitle": "discover search check when user want to view and share public sources.",
+              "timedOut": null,
+              "duration": 26363,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Failed screenshot\",\n        \"value\": \"/discover_search.cy.js/discover search -- check when user want to view and share public sources (failed).png\"\n      }\n    ]\n  ]\n}",
+              "code": "cy.wait(3000);\ncy.get('input[placeholder=\"Find Answers for your Deeptech Questions\"]').clear();\ncy.get('input[placeholder=\"Find Answers for your Deeptech Questions\"]').type('precision medicine{enter}');\ncy.wait(8000);\ncy.get(\"#long-button\").click();\ncy.contains(\"li\", \"Share\").click();\ncy.wait(3000);\ncy.get('.MuiGrid-justify-content-xs-flex-end > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root > path').click();\ncy.wait(3000);\ncy.contains('span', 'View').click();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Share' within the selector: 'li' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Share' within the selector: 'li' but never did.\n    at Context.eval (https://demo.insightmonk.com/__cypress/tests?p=cypress/e2e/discover_search.cy.js:132:8)",
+                "diff": null
+              },
+              "uuid": "50588e4b-8246-4d6b-ace8-9a2e4efb27f7",
+              "parentUUID": "3dc34b7a-2534-487b-b22d-4a819f43052b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "check when user want to select any sector with exact keyword.",
+              "fullTitle": "discover search check when user want to select any sector with exact keyword.",
+              "timedOut": null,
+              "duration": 48768,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Failed screenshot\",\n        \"value\": \"/discover_search.cy.js/discover search -- check when user want to select any sector with exact keyword (failed).png\"\n      }\n    ]\n  ]\n}",
+              "code": "cy.wait(3000);\ncy.get('input[placeholder=\"Find Answers for your Deeptech Questions\"]').clear();\ncy.get('input[placeholder=\"Find Answers for your Deeptech Questions\"]').type('precision digital health{enter}');\ncy.wait(8000);\ncy.get(\".MuiSelect-root\").click();\ncy.contains('li', 'Healthcare').click();\ncy.wait(3000);\ncy.contains('span', 'Reports').click();\ncy.wait(8000);\ncy.contains('span', 'Q&A').click();\ncy.wait(8000);\ncy.contains('span', 'Public Sources&A').click();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Public Sources&A' within the selector: 'span' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Public Sources&A' within the selector: 'span' but never did.\n    at Context.eval (https://demo.insightmonk.com/__cypress/tests?p=cypress/e2e/discover_search.cy.js:150:8)",
+                "diff": null
+              },
+              "uuid": "80d25354-8512-40ad-a2a4-84bb87e2e7d3",
+              "parentUUID": "3dc34b7a-2534-487b-b22d-4a819f43052b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "check when user search keyword with any special character and press enter.",
+              "fullTitle": "discover search check when user search keyword with any special character and press enter.",
+              "timedOut": null,
+              "duration": 43428,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(3000);\ncy.get('input[placeholder=\"Find Answers for your Deeptech Questions\"]').clear();\ncy.get('input[placeholder=\"Find Answers for your Deeptech Questions\"]').type('\"precision medicine\"{enter}');\ncy.wait(8000); // cy.get(\".MuiSelect-root\").click()\n// cy.contains('li', 'Healthcare').click()\ncy.wait(3000);\ncy.contains('span', 'Reports').click();\ncy.wait(8000);\ncy.contains('span', 'Q&A').click();\ncy.wait(8000); // cy.contains('span', 'Public Sources&A').click()",
+              "err": {},
+              "uuid": "175afc52-53df-444d-9a8e-291c74d05807",
+              "parentUUID": "3dc34b7a-2534-487b-b22d-4a819f43052b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "check when user add space before,after and between the search keyword and press enter.",
+              "fullTitle": "discover search check when user add space before,after and between the search keyword and press enter.",
+              "timedOut": null,
+              "duration": 42640,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(3000);\ncy.get('input[placeholder=\"Find Answers for your Deeptech Questions\"]').clear();\ncy.get('input[placeholder=\"Find Answers for your Deeptech Questions\"]').type('   waste  water {enter}');\ncy.wait(8000); // cy.get(\".MuiSelect-root\").click()\n// cy.contains('li', 'Healthcare').click()\ncy.wait(3000);\ncy.contains('span', 'Reports').click();\ncy.wait(8000);\ncy.contains('span', 'Q&A').click();\ncy.wait(8000); // cy.contains('span', 'Public Sources&A').click()",
+              "err": {},
+              "uuid": "6979f842-00ef-4ffb-9676-863ea5e0a7ff",
+              "parentUUID": "3dc34b7a-2534-487b-b22d-4a819f43052b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "check when user search keyword with numeric value and press enter.",
+              "fullTitle": "discover search check when user search keyword with numeric value and press enter.",
+              "timedOut": null,
+              "duration": 42196,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(3000);\ncy.get('input[placeholder=\"Find Answers for your Deeptech Questions\"]').clear();\ncy.get('input[placeholder=\"Find Answers for your Deeptech Questions\"]').type('waste water 123{enter}');\ncy.wait(8000); // cy.get(\".MuiSelect-root\").click()\n// cy.contains('li', 'Healthcare').click()\ncy.wait(3000);\ncy.contains('span', 'Reports').click();\ncy.wait(8000);\ncy.contains('span', 'Q&A').click();\ncy.wait(8000); // cy.contains('span', 'Public Sources&A').click()",
+              "err": {},
+              "uuid": "843e4f5e-e119-4389-944a-a24e4fa75ffb",
+              "parentUUID": "3dc34b7a-2534-487b-b22d-4a819f43052b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "54cab811-c585-49a5-b387-59357f4773c1",
+            "b813c1e5-713d-4d06-8357-5361001dd26a",
+            "da4b8d14-bbba-4a64-9e96-6063aeaace07",
+            "175afc52-53df-444d-9a8e-291c74d05807",
+            "6979f842-00ef-4ffb-9676-863ea5e0a7ff",
+            "843e4f5e-e119-4389-944a-a24e4fa75ffb"
+          ],
+          "failures": [
+            "50588e4b-8246-4d6b-ace8-9a2e4efb27f7",
+            "80d25354-8512-40ad-a2a4-84bb87e2e7d3"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 282050,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

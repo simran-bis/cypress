@@ -1,6 +1,6 @@
 describe('homepage_filter', () => {
 
-    before(() => {
+    beforeEach(() => {
         cy.viewport(1200, 1000)
 
         cy.visit('https://demo.insightmonk.com/discover')

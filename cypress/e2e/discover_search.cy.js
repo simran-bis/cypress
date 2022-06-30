@@ -1,6 +1,6 @@
 describe('discover search', () => {
 
-    before(() => {
+    beforeEach(() => {
         cy.visit('https://demo.insightmonk.com/discover')
             // cy.clearCookies({ log: true })
             // cy.clearLocalStorage({ log: true })
@@ -17,7 +17,7 @@ describe('discover search', () => {
 
         })
         //auto suggestion
-    it('check Typing  characters in the search box, it should show a list of product suggestions starting with the entered character.', () => {
+    it('check Typing  characters in the search box, it should show suggestions starting with the entered character.', () => {
         cy.wait(3000)
         cy.get('input[placeholder="Find Answers for your Deeptech Questions"]').type('pre')
         cy.wait(8000)
@@ -97,7 +97,7 @@ describe('discover search', () => {
     it('check when user search keyword with numeric value and press enter.', () => {
         cy.wait(3000)
         cy.get('input[placeholder="Find Answers for your Deeptech Questions"]').clear()
-        cy.get('input[placeholder="Find Answers for your Deeptech Questions"]').type('   waste  water 123 {enter}')
+        cy.get('input[placeholder="Find Answers for your Deeptech Questions"]').type('waste water 123{enter}')
         cy.wait(8000)
             // cy.get(".MuiSelect-root").click()
             // cy.contains('li', 'Healthcare').click()
