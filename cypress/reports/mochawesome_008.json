@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2022-06-29T13:06:44.379Z",
-    "end": "2022-06-29T13:08:21.443Z",
-    "duration": 97064,
+    "start": "2022-07-04T09:47:53.622Z",
+    "end": "2022-07-04T09:49:24.453Z",
+    "duration": 90831,
     "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "9748d1ad-9ac3-44db-a175-c77fc98e1a9a",
+      "uuid": "3bd9300d-8473-4a94-9ab3-f9d35d6e15ce",
       "title": "",
       "fullFile": "cypress/e2e/membership.cy.js",
       "file": "cypress/e2e/membership.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "6c3ed26e-7903-4cbb-a88c-25bd839ea97d",
+          "uuid": "58a8d239-e513-4b9f-86c1-1dc8cb828e40",
           "title": "membership",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "check membership plan when user already  an expert",
               "fullTitle": "membership check membership plan when user already  an expert",
               "timedOut": null,
-              "duration": 25992,
+              "duration": 24049,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.wait(6000);\ncy.get(\".MuiGrid-container > :nth-child(2) > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root > path\").click();\ncy.wait(5000);\ncy.get('.MuiButton-containedPrimary').then($body => {\n  if ($body.find('Click here to be an expert').is(':visible')) {\n    cy.log('A row  exists');\n    cy.contains(\"span\", \"Click here to be an expert\").click();\n  } else {\n    cy.log('A row doesnt exists');\n  }\n});\ncy.contains(\"span\", \"Quaterly\");\ncy.contains(\"span\", \"Annual\");",
               "err": {},
-              "uuid": "137f61cb-d65d-4b7f-baf4-641bc8c528bd",
-              "parentUUID": "6c3ed26e-7903-4cbb-a88c-25bd839ea97d",
+              "uuid": "cb330915-f6bc-4b4c-ab80-78d5231ca1df",
+              "parentUUID": "58a8d239-e513-4b9f-86c1-1dc8cb828e40",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "when user want to check membership plan and  be an expert.",
               "fullTitle": "membership when user want to check membership plan and  be an expert.",
               "timedOut": null,
-              "duration": 26385,
+              "duration": 25964,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "cy.visit('https://demo.insightmonk.com/discover');\ncy.clearCookies({\n  log: true\n});\ncy.clearLocalStorage({\n  log: true\n});\ncy.contains(\"span\", \"Login\").click();\ncy.get('input[name=\"email\"]').type(\"bhalla.simran297+128@gmail.com\");\ncy.get('input[name=\"password\"]').type(\"simran123\");\ncy.contains(\"span\", \"Sign In\").click();\ncy.wait(5000);\ncy.contains(\"button\", \"Skip\").click();\ncy.wait(6000);\ncy.get(\".MuiGrid-container > :nth-child(2) > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root > path\").click();\ncy.wait(5000);\ncy.contains(\"span\", \"Quaterly\");\ncy.contains(\"span\", \"Annual\");\ncy.wait(2000);\ncy.contains(\"span\", \"Click here to be an expert\").click();",
               "err": {},
-              "uuid": "f35bba86-e014-42f8-9bb9-5eb5bded799d",
-              "parentUUID": "6c3ed26e-7903-4cbb-a88c-25bd839ea97d",
+              "uuid": "0deaada9-703a-4d5c-b571-97ddb8dcdad3",
+              "parentUUID": "58a8d239-e513-4b9f-86c1-1dc8cb828e40",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "when user want to apply any membership plan",
               "fullTitle": "membership when user want to apply any membership plan",
               "timedOut": null,
-              "duration": 41550,
+              "duration": 36358,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -83,22 +83,22 @@
               "context": null,
               "code": "cy.visit('https://demo.insightmonk.com/discover');\ncy.clearCookies({\n  log: true\n});\ncy.clearLocalStorage({\n  log: true\n});\ncy.contains(\"span\", \"Login\").click();\ncy.get('input[name=\"email\"]').type(\"bhalla.simran297@gmail.com\");\ncy.get('input[name=\"password\"]').type(\"bis@1998\");\ncy.contains(\"span\", \"Sign In\").click();\ncy.wait(5000);\ncy.contains(\"button\", \"Skip\").click();\ncy.wait(6000);\ncy.get(\".MuiGrid-container > :nth-child(2) > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root > path\").click();\ncy.wait(5000);\ncy.contains(\"span\", \"Quaterly\").click();\ncy.wait(2000);\ncy.contains(\"span\", \"Annual\").click();\ncy.wait(2000);\ncy.contains(\"span\", \"Get Started\").first().click();\ncy.wait(2000);\ncy.contains(\"button\", \"Disagree\").click();\ncy.wait(2000);\ncy.contains(\"span\", \"Quaterly\").click();\ncy.get(\":nth-child(2) > .MuiPaper-root > .MuiCardContent-root > .MuiGrid-container > :nth-child(5) > .MuiButtonBase-root\").click();\ncy.wait(2000);\ncy.contains(\"button\", \"Disagree\").click();",
               "err": {},
-              "uuid": "27199dc8-cdaf-41f4-a2fa-8b14904da63e",
-              "parentUUID": "6c3ed26e-7903-4cbb-a88c-25bd839ea97d",
+              "uuid": "c50369d7-eab0-465d-a905-708356b083e9",
+              "parentUUID": "58a8d239-e513-4b9f-86c1-1dc8cb828e40",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "137f61cb-d65d-4b7f-baf4-641bc8c528bd",
-            "f35bba86-e014-42f8-9bb9-5eb5bded799d",
-            "27199dc8-cdaf-41f4-a2fa-8b14904da63e"
+            "cb330915-f6bc-4b4c-ab80-78d5231ca1df",
+            "0deaada9-703a-4d5c-b571-97ddb8dcdad3",
+            "c50369d7-eab0-465d-a905-708356b083e9"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 93927,
+          "duration": 86371,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

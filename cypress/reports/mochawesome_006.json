@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2022-06-29T13:03:47.253Z",
-    "end": "2022-06-29T13:04:37.047Z",
-    "duration": 49794,
+    "start": "2022-07-04T09:44:56.436Z",
+    "end": "2022-07-04T09:45:44.956Z",
+    "duration": 48520,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "55fc00b7-6d5c-427c-80d9-0f46fc4c76a9",
+      "uuid": "738f44b7-24e2-47d9-bd2c-3e84d99d0039",
       "title": "",
       "fullFile": "cypress/e2e/homepage_filter.cy.js",
       "file": "cypress/e2e/homepage_filter.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "c1a42796-174d-44c6-9322-37ae2ad3a9fa",
+          "uuid": "93a4caaa-271c-4fe0-bb79-8a60d938831a",
           "title": "homepage_filter",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "check when user want to filter accepted answer.",
               "fullTitle": "homepage_filter check when user want to filter accepted answer.",
               "timedOut": null,
-              "duration": 24310,
+              "duration": 24238,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.wait(5000);\ncy.get(\":nth-child(2) > #panel2bh-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root\").click();\ncy.get('[type=\"checkbox\"]').check('ACCEPTED_ANSWERS'); //uncheck selected \ncy.wait(5000);\ncy.get('[type=\"checkbox\"]').uncheck('ACCEPTED_ANSWERS');\ncy.get(\".MuiPaper-root.Mui-expanded > #panel2bh-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root\").click();",
               "err": {},
-              "uuid": "c09eb09b-0f9e-4f73-b2c3-82217261067a",
-              "parentUUID": "c1a42796-174d-44c6-9322-37ae2ad3a9fa",
+              "uuid": "589cc410-dbed-47c1-aa8d-eae086cc46e1",
+              "parentUUID": "93a4caaa-271c-4fe0-bb79-8a60d938831a",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "check when user want to select topic, sector and select most answered ",
               "fullTitle": "homepage_filter check when user want to select topic, sector and select most answered ",
               "timedOut": null,
-              "duration": 22508,
+              "duration": 21675,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -65,21 +65,21 @@
               "context": null,
               "code": "cy.get(\":nth-child(3) > #panel2bh-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root\").click();\ncy.wait(2000);\ncy.get('[type=\"checkbox\"]').check('Precision Medicine');\ncy.wait(2000);\ncy.get('[type=\"checkbox\"]').check('Space Tech'); //selected sector\ncy.get(\":nth-child(4) > #panel2bh-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root\").click();\ncy.wait(2000);\ncy.get('[type=\"checkbox\"]').check('Automotive');\ncy.get(\":nth-child(5) > #panel2bh-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root\").click();\ncy.wait(2000);\ncy.get('[value=\"MOST_ANSWERED\"]').check();",
               "err": {},
-              "uuid": "c174eefd-9f85-449b-8eb8-84c0e8ff180f",
-              "parentUUID": "c1a42796-174d-44c6-9322-37ae2ad3a9fa",
+              "uuid": "610a7151-aa6b-482c-b7ab-715b6e823f78",
+              "parentUUID": "93a4caaa-271c-4fe0-bb79-8a60d938831a",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "c09eb09b-0f9e-4f73-b2c3-82217261067a",
-            "c174eefd-9f85-449b-8eb8-84c0e8ff180f"
+            "589cc410-dbed-47c1-aa8d-eae086cc46e1",
+            "610a7151-aa6b-482c-b7ab-715b6e823f78"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 46818,
+          "duration": 45913,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

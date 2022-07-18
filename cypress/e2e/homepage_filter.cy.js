@@ -20,7 +20,7 @@ describe('homepage_filter', () => {
 
     it('check when user want to filter accepted answer.', () => {
             cy.wait(5000)
-            cy.get(":nth-child(2) > #panel2bh-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root").click()
+            cy.get(':nth-child(1) > #panel2bh-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root').click()
             cy.get('[type="checkbox"]').check('ACCEPTED_ANSWERS')
 
             //uncheck selected 
@@ -33,8 +33,7 @@ describe('homepage_filter', () => {
         //  
 
     it('check when user want to select topic, sector and select most answered ', () => {
-
-        cy.get(":nth-child(3) > #panel2bh-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root").click()
+        cy.get(':nth-child(2) > #panel2bh-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root').click()
         cy.wait(2000)
 
         cy.get('[type="checkbox"]').check('Precision Medicine')
@@ -43,10 +42,10 @@ describe('homepage_filter', () => {
         cy.get('[type="checkbox"]').check('Space Tech')
 
         //selected sector
-        cy.get(":nth-child(4) > #panel2bh-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root").click()
+        cy.get(':nth-child(3) > #panel2bh-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root').click()
         cy.wait(2000)
         cy.get('[type="checkbox"]').check('Automotive')
-        cy.get(":nth-child(5) > #panel2bh-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root").click()
+        cy.get(':nth-child(4) > #panel2bh-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root').click()
         cy.wait(2000)
         cy.get('[value="MOST_ANSWERED"]').check()
 

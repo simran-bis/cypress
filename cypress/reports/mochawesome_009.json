@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2022-06-29T13:08:41.467Z",
-    "end": "2022-06-29T13:09:12.213Z",
-    "duration": 30746,
+    "start": "2022-07-04T09:49:49.021Z",
+    "end": "2022-07-04T09:50:18.401Z",
+    "duration": 29380,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "2c601d4d-b9aa-4a7b-b77f-aeaf11908579",
+      "uuid": "df9bd102-a314-4a93-890d-95323cb4a7a7",
       "title": "",
       "fullFile": "cypress/e2e/myproject.cy.js",
       "file": "cypress/e2e/myproject.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "e22e9121-b49c-4767-8a8e-6129ddc9504d",
+          "uuid": "65dda681-2972-40c3-bbff-a0cdacac83ed",
           "title": "my_project",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "when user want to check project details",
               "fullTitle": "my_project when user want to check project details",
               "timedOut": null,
-              "duration": 27180,
+              "duration": 25598,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -51,8 +51,8 @@
                 "estack": "CypressError: `cy.click()` can only be called on a single element. Your subject contained 2 elements. Pass `{ multiple: true }` if you want to serially click each element.\n\nhttps://on.cypress.io/click\n    at mouseAction (https://demo.insightmonk.com/__cypress/runner/cypress_runner.js:149685:76)\n    at Context.click (https://demo.insightmonk.com/__cypress/runner/cypress_runner.js:149864:14)\n    at Context.<anonymous> (https://demo.insightmonk.com/__cypress/runner/cypress_runner.js:171662:19)\nFrom Your Spec Code:\n    at Context.eval (https://demo.insightmonk.com/__cypress/tests?p=cypress/e2e/myproject.cy.js:120:95)",
                 "diff": null
               },
-              "uuid": "ce1a76a6-07cf-415d-a3cc-70375e5d2f0b",
-              "parentUUID": "e22e9121-b49c-4767-8a8e-6129ddc9504d",
+              "uuid": "7ebd333d-04ed-4109-a0b2-4071338cf711",
+              "parentUUID": "65dda681-2972-40c3-bbff-a0cdacac83ed",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "ce1a76a6-07cf-415d-a3cc-70375e5d2f0b"
+            "7ebd333d-04ed-4109-a0b2-4071338cf711"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 27180,
+          "duration": 25598,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

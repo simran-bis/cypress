@@ -12,6 +12,8 @@ describe('signup test', () => {
         cy.get('input[name="confirmPassword"]').type("bis@1998")
         cy.get('[type="checkbox"]').first().check()
         cy.contains("span", "Sign Up").click()
+        cy.wait(7000);
+
     })
     it('when user enter differt confirm password', () => {
         cy.visit('https://demo.insightmonk.com/discover')

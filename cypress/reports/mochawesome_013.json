@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2022-06-29T13:11:36.784Z",
-    "end": "2022-06-29T13:12:56.439Z",
-    "duration": 79655,
+    "start": "2022-07-04T09:55:34.442Z",
+    "end": "2022-07-04T09:56:55.178Z",
+    "duration": 80736,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "066b4b68-3e3d-4892-bb68-fcc0b93dfc21",
+      "uuid": "ab2c7d83-b996-4429-ba9a-cd59690dad24",
       "title": "",
       "fullFile": "cypress/e2e/profile.cy.js",
       "file": "cypress/e2e/profile.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "f0887fe0-8864-4948-8871-9f7025bc5750",
+          "uuid": "eb2d1785-df8e-41e3-a3bb-518b40da8431",
           "title": "profile",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "check when user want to check my profile and change password.",
               "fullTitle": "profile check when user want to check my profile and change password.",
               "timedOut": null,
-              "duration": 40513,
+              "duration": 39587,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.wait(6000);\ncy.get(\".MuiButton-label > .MuiAvatar-root\").click();\ncy.wait(2000);\ncy.contains(\"span\", \"My Profile\").click();\ncy.wait(6000);\ncy.contains(\"span\", \"Change password\").click();\ncy.get('input[name=\"oldPassword\"]').type('bis@1234');\ncy.get('input[name=\"newPassWord\"]').type('bis@123456');\ncy.get('input[name=\"confirmPassword\"]').type('bis@123456');\ncy.wait(2000);\ncy.contains(\"span\", \"Cancel\").click();",
               "err": {},
-              "uuid": "41b9c7e8-1452-4cb3-9ef2-31e25102fae4",
-              "parentUUID": "f0887fe0-8864-4948-8871-9f7025bc5750",
+              "uuid": "6a253861-fb0e-4701-9326-a2caff81577d",
+              "parentUUID": "eb2d1785-df8e-41e3-a3bb-518b40da8431",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "when user want to edit profile",
               "fullTitle": "profile when user want to edit profile",
               "timedOut": null,
-              "duration": 35993,
+              "duration": 38398,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -65,21 +65,21 @@
               "context": null,
               "code": "cy.wait(3000);\ncy.get(\".MuiButton-label > .MuiAvatar-root\").click();\ncy.wait(2000);\ncy.contains(\"span\", \"Edit Profile\").click();\ncy.wait(5000);\ncy.get('input[name=\"name\"]').clear();\ncy.get('input[name=\"name\"]').type('simran simran');\ncy.get('input[name=\"zip\"]').clear();\ncy.get('input[name=\"zip\"]').type('120087'); // const input = cy.get('input[value=\"+91\"]')\n// const flag = cy.get(\".selected-flag\")\n// if (input === \"\" && flag === \"\") {\n//     cy.log(\"blank\")\n//     cy.get(\".arrow\").click()\n//     cy.contains(\"span\", \"+91\").click()\n//     cy.get('input[value=\"+91\"]').type('8920669876')\n//     cy.wait(2000)\n// }\ncy.contains(\"span\", \"Save\");\ncy.wait(2000);",
               "err": {},
-              "uuid": "c70b7c3e-431d-4c83-adde-19bbdb5bc32b",
-              "parentUUID": "f0887fe0-8864-4948-8871-9f7025bc5750",
+              "uuid": "133e2c8a-40d8-4466-ac6e-5aad3316ae18",
+              "parentUUID": "eb2d1785-df8e-41e3-a3bb-518b40da8431",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "41b9c7e8-1452-4cb3-9ef2-31e25102fae4",
-            "c70b7c3e-431d-4c83-adde-19bbdb5bc32b"
+            "6a253861-fb0e-4701-9326-a2caff81577d",
+            "133e2c8a-40d8-4466-ac6e-5aad3316ae18"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 76506,
+          "duration": 77985,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 2,
-    "passes": 2,
+    "passes": 1,
     "pending": 0,
-    "failures": 0,
-    "start": "2022-06-29T13:14:44.472Z",
-    "end": "2022-06-29T13:15:41.095Z",
-    "duration": 56623,
+    "failures": 1,
+    "start": "2022-07-04T09:59:32.759Z",
+    "end": "2022-07-04T10:00:25.236Z",
+    "duration": 52477,
     "testsRegistered": 2,
-    "passPercent": 100,
+    "passPercent": 50,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "ef345294-e830-4bd3-b8d5-e5114f174148",
+      "uuid": "80b5f6c3-8e6d-4bc3-860c-d768f3a6b832",
       "title": "",
       "fullFile": "cypress/e2e/reports.cy.js",
       "file": "cypress/e2e/reports.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "8abe8a12-871e-4f2d-890a-cb147cbd88da",
+          "uuid": "55f82718-d977-46f9-a5e1-02e1c7ab560b",
           "title": "reports",
           "fullFile": "",
           "file": "",
@@ -38,17 +38,21 @@
               "title": "check when user want to check reports by date range.",
               "fullTitle": "reports check when user want to check reports by date range.",
               "timedOut": null,
-              "duration": 24210,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
+              "duration": 21805,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
               "pending": false,
-              "context": null,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Failed screenshot\",\n        \"value\": \"/reports.cy.js/reports -- check when user want to check reports by date range (failed).png\"\n      }\n    ]\n  ]\n}",
               "code": "cy.wait(2000);\ncy.get(\".report\").click();\ncy.wait(2000);\ncy.get(\".MuiSelect-root\").click();\ncy.contains(\"li\", \"Last 2 years\").click();\ncy.wait(5000); // cy.get(\":nth-child(2) > #panel1bh-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root\").click()\n// cy.wait(6000)\n// cy.get('[type=\"checkbox\"]').check(\"Agriculture and Food Tech\")\n// cy.wait(7000)\n// cy.get(\".MuiPaper-root.Mui-expanded > #panel1bh-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root\").click()\n// cy.get(\":nth-child(3) > #panel1bh-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root\").click()\n// cy.contains(\"span\", \"Company Profile\").click()\n// cy.wait(6000)\n// cy.contains(\"span\", \"View\").first().click()\n// cy.wait(6000)\n// cy.contains(\"span\", \"close\").click()\n// cy.contains(\"span\", \"Full Report\").click()\n// cy.wait(8000)\n// cy.contains(\"span\", \"Public Sources\").click()\n// cy.wait(8000)\n// cy.get(\".MuiSelect-root\").click()\n// cy.contains(\"li\", \"Last Month\").click()\n// cy.get(\":nth-child(3) > .MuiAccordionSummary-root > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root\").click()\n// cy.wait(6000)\n// cy.get('[placeholder=\"Search\"]').eq(0).type(\"Company Reports\")\n// cy.get('[type=\"checkbox\"]').first().check()\n// cy.wait(6000)\n// cy.get(\":nth-child(4) > .MuiAccordionSummary-root > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root\").click()\n// cy.wait(6000)\n// cy.get(\"#long-button\").first().click()\n// cy.contains(\"li\", \"Share\").click()\n// cy.wait(2000)\n// cy.get(\".MuiGrid-justify-content-xs-flex-end > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root\").click()\n// cy.wait(2000)\n// cy.get(\"#long-button\").first().click()\n// cy.contains(\"li\", \"Add to Library\").click()\n// cy.wait(5000)\n// cy.get('body').click(0, 0);\n// cy.contains(\"span\", \"View\").click()\n// cy.wait(\"3000\")\n// cy.get('body').click(0, 0);\n// cy.get(\"#panel1a-header\").click()\n// cy.get('[placeholder=\"Search\"]').eq(1).type(\"North America\")\n// cy.wait(6000)\n//[@id=\"__next\"]/div/div/div/div[3]/div/div[4]/div[2]/div/div/div/div/fieldset/div/label[1]/span[2]\n// cy.get(\":nth-child(3) > .MuiAccordionSummary-root > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root\").click()\n// cy.get('[placeholder=\"Search\"]').eq(0).type(\"Investor presentation (674)\")\n// cy.wait(8000)\n// cy.get('[type=\"checkbox\"]').check(\"INVESTOR_PRESENTATION\")\n// cy.wait(8000)\n// Cypress.Commands.add('getDropdownOptions', () => {\n//     return cy.get('.MuiAutocomplete-popper [role=\"listbox\"] [role=\"option\"]', {\n//         timeout: 10000,\n//     });\n// });\n// cy.getDropdownOptions().contains('Precision Medicine').click();\n// cy.contains(\"span\", \"View\").first().click()\n// cy.contains('.MuiGrid-root', 'cypress').within(() => {\n//     cy.get('MuiSvgIcon-root').click() // 1st button is edit\n// })\n//more icon\n// cy.get('.jss373 > .jss375 > .MuiGrid-wrap-xs-nowrap > :nth-child(1) > .MuiGrid-spacing-xs-2 > .MuiGrid-grid-xs-true > [style=\"flex-wrap: initial;\"] > [style=\"margin-top: -10px;\"] > #long-button > .MuiIconButton-label > .MuiSvgIcon-root').click()\n//     // cy.get('svg.MuiSvgIcon-root').eq(1).click() //clicks the first svg icon\n// cy.contains(\"li\", \"Add to Library\").click()\n// cy.wait(8000)\n// cy.contains(\"li\", \"Share\").click()\n// cy.get('.MuiGrid-justify-content-xs-flex-end > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root > path').click()",
-              "err": {},
-              "uuid": "77a20e46-48c8-4eea-8e75-2daa84feed80",
-              "parentUUID": "8abe8a12-871e-4f2d-890a-cb147cbd88da",
+              "err": {
+                "message": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element is detached from the DOM.\n\n`<li class=\"MuiButtonBase-root MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button\" tabindex=\"-1\" role=\"option\" aria-disabled=\"false\" data-value=\"Last 2 years\">...</li>`\n\nCypress requires elements be attached in the DOM to interact with them.\n\nThe previous command that ran was:\n\n  > `cy.contains()`\n\nThis DOM element likely became detached somewhere between the previous and current command.\n\nCommon situations why this happens:\n  - Your JS framework re-rendered asynchronously\n  - Your app code reacted to an event firing and removed the element\n\nYou typically need to re-query for the element or add 'guards' which delay Cypress from running new commands.\n\nhttps://on.cypress.io/element-has-detached-from-dom",
+                "estack": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element is detached from the DOM.\n\n`<li class=\"MuiButtonBase-root MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button\" tabindex=\"-1\" role=\"option\" aria-disabled=\"false\" data-value=\"Last 2 years\">...</li>`\n\nCypress requires elements be attached in the DOM to interact with them.\n\nThe previous command that ran was:\n\n  > `cy.contains()`\n\nThis DOM element likely became detached somewhere between the previous and current command.\n\nCommon situations why this happens:\n  - Your JS framework re-rendered asynchronously\n  - Your app code reacted to an event firing and removed the element\n\nYou typically need to re-query for the element or add 'guards' which delay Cypress from running new commands.\n\nhttps://on.cypress.io/element-has-detached-from-dom\n    at $Cy.ensureAttached (https://demo.insightmonk.com/__cypress/runner/cypress_runner.js:161860:76)\n    at runAllChecks (https://demo.insightmonk.com/__cypress/runner/cypress_runner.js:147665:12)\n    at retryActionability (https://demo.insightmonk.com/__cypress/runner/cypress_runner.js:147745:16)\n    at tryCatcher (https://demo.insightmonk.com/__cypress/runner/cypress_runner.js:13012:23)\n    at Function.Promise.attempt.Promise.try (https://demo.insightmonk.com/__cypress/runner/cypress_runner.js:10286:29)\n    at whenStable (https://demo.insightmonk.com/__cypress/runner/cypress_runner.js:166930:65)\n    at https://demo.insightmonk.com/__cypress/runner/cypress_runner.js:166385:14\n    at tryCatcher (https://demo.insightmonk.com/__cypress/runner/cypress_runner.js:13012:23)\n    at Promise._settlePromiseFromHandler (https://demo.insightmonk.com/__cypress/runner/cypress_runner.js:10947:31)\n    at Promise._settlePromise (https://demo.insightmonk.com/__cypress/runner/cypress_runner.js:11004:18)\n    at Promise._settlePromise0 (https://demo.insightmonk.com/__cypress/runner/cypress_runner.js:11049:10)\n    at Promise._settlePromises (https://demo.insightmonk.com/__cypress/runner/cypress_runner.js:11129:18)\n    at Promise._fulfill (https://demo.insightmonk.com/__cypress/runner/cypress_runner.js:11073:18)\n    at https://demo.insightmonk.com/__cypress/runner/cypress_runner.js:12687:46\nFrom Your Spec Code:\n    at Context.eval (https://demo.insightmonk.com/__cypress/tests?p=cypress/e2e/reports.cy.js:121:39)",
+                "diff": null
+              },
+              "uuid": "792a9b61-233e-4e04-acdf-2072993428dc",
+              "parentUUID": "55f82718-d977-46f9-a5e1-02e1c7ab560b",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +60,7 @@
               "title": "check when user want to filter reports by sector and report types",
               "fullTitle": "reports check when user want to filter reports by sector and report types",
               "timedOut": null,
-              "duration": 29173,
+              "duration": 27884,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -65,21 +69,22 @@
               "context": null,
               "code": "cy.get(\".report\").click();\ncy.wait(8000);\ncy.get(\":nth-child(2) > #panel1bh-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root\").click();\ncy.get('[type=\"checkbox\"').check(\"Agriculture and Food Tech\");\ncy.wait(6000);\ncy.get(\":nth-child(3) > #panel1bh-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root\").click();\ncy.get('[value=\"Sections\"]').check();",
               "err": {},
-              "uuid": "4ea27cd1-ea15-43da-9750-ea1f3b3ebabc",
-              "parentUUID": "8abe8a12-871e-4f2d-890a-cb147cbd88da",
+              "uuid": "5f0364fb-6721-4331-880d-b16f0520b469",
+              "parentUUID": "55f82718-d977-46f9-a5e1-02e1c7ab560b",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "77a20e46-48c8-4eea-8e75-2daa84feed80",
-            "4ea27cd1-ea15-43da-9750-ea1f3b3ebabc"
+            "5f0364fb-6721-4331-880d-b16f0520b469"
           ],
-          "failures": [],
+          "failures": [
+            "792a9b61-233e-4e04-acdf-2072993428dc"
+          ],
           "pending": [],
           "skipped": [],
-          "duration": 53383,
+          "duration": 49689,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2022-06-29T12:47:06.915Z",
-    "end": "2022-06-29T12:47:39.353Z",
-    "duration": 32438,
+    "start": "2022-07-04T09:25:12.429Z",
+    "end": "2022-07-04T09:25:27.605Z",
+    "duration": 15176,
     "testsRegistered": 3,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "44a74d51-e276-49cc-9ec4-0f22be345386",
+      "uuid": "31a3aff9-e4cd-4489-8545-3171851dc592",
       "title": "",
       "fullFile": "cypress/e2e/ask_a_quetion.cy.js",
       "file": "cypress/e2e/ask_a_quetion.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "96ecdbb1-6c0c-4fb4-8237-a98bd97fe4d0",
+          "uuid": "e3f6aff1-ac69-4f15-b6e7-98471e5f4b4a",
           "title": "ask a question",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "check when user ask a question without required details.",
               "fullTitle": "ask a question check when user ask a question without required details.",
               "timedOut": null,
-              "duration": 26609,
+              "duration": 10990,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -51,8 +51,8 @@
                 "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `input[name=\"email\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `ask a question`\n    at Context.eval (https://community.insightmonk.com/__cypress/tests?p=cypress/e2e/ask_a_quetion.cy.js:103:8)",
                 "diff": null
               },
-              "uuid": "54a79bed-a6cf-4910-abf2-b069aea9e108",
-              "parentUUID": "96ecdbb1-6c0c-4fb4-8237-a98bd97fe4d0",
+              "uuid": "142545cd-e358-4bdb-9a73-ac7aa3cec6a4",
+              "parentUUID": "e3f6aff1-ac69-4f15-b6e7-98471e5f4b4a",
               "isHook": false,
               "skipped": false
             },
@@ -69,8 +69,8 @@
               "context": null,
               "code": "cy.get('[placeholder=\"Enter title\"]').type('Precision Medicine');\ncy.wait(3000);\ncy.get(\".ql-editor\").type(\"Testing message\");\ncy.get('[placeholder=\"Enter a value\"]').type('Precision Medicine');\nCypress.Commands.add('getDropdownOptions', () => {\n  return cy.get('.MuiAutocomplete-popper [role=\"listbox\"] [role=\"option\"]', {\n    timeout: 10000\n  });\n});\ncy.getDropdownOptions().contains('Precision medicine').click(); // cy.contains(\"span\", \"Post Question\").click()",
               "err": {},
-              "uuid": "8b2df8dd-581e-4e96-9676-170c7566e6c7",
-              "parentUUID": "96ecdbb1-6c0c-4fb4-8237-a98bd97fe4d0",
+              "uuid": "d3b3344c-dad2-4262-a368-3a6dc823cf7c",
+              "parentUUID": "e3f6aff1-ac69-4f15-b6e7-98471e5f4b4a",
               "isHook": false,
               "skipped": true
             },
@@ -87,8 +87,8 @@
               "context": null,
               "code": "cy.get(\".jss194 > .MuiAutocomplete-root > .MuiFormControl-root > .MuiInputBase-root\").click();\nCypress.Commands.add('getDropdownOptions', () => {\n  return cy.get('.MuiAutocomplete-popper [role=\"listbox\"] [role=\"option\"]', {\n    timeout: 10000\n  });\n});\ncy.getDropdownOptions().contains('Precision Medicine').click();\ncy.wait(3000);\ncy.get(\".ql-editor\").clear(); // cy.contains(\"span\", \"Post Question\").click()",
               "err": {},
-              "uuid": "46d70c28-66e8-4e01-9e70-00f5aac0a739",
-              "parentUUID": "96ecdbb1-6c0c-4fb4-8237-a98bd97fe4d0",
+              "uuid": "e9d6ab75-36e5-4b90-b022-91b41f131012",
+              "parentUUID": "e3f6aff1-ac69-4f15-b6e7-98471e5f4b4a",
               "isHook": false,
               "skipped": true
             }
@@ -96,14 +96,14 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "54a79bed-a6cf-4910-abf2-b069aea9e108"
+            "142545cd-e358-4bdb-9a73-ac7aa3cec6a4"
           ],
           "pending": [],
           "skipped": [
-            "8b2df8dd-581e-4e96-9676-170c7566e6c7",
-            "46d70c28-66e8-4e01-9e70-00f5aac0a739"
+            "d3b3344c-dad2-4262-a368-3a6dc823cf7c",
+            "e9d6ab75-36e5-4b90-b022-91b41f131012"
           ],
-          "duration": 26609,
+          "duration": 10990,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

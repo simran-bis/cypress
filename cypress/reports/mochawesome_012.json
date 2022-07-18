@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2022-06-29T13:10:35.689Z",
-    "end": "2022-06-29T13:11:24.514Z",
-    "duration": 48825,
+    "start": "2022-07-04T09:54:38.802Z",
+    "end": "2022-07-04T09:55:23.314Z",
+    "duration": 44512,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "913c8cbf-a2fc-409b-9bc7-b0d820d04f24",
+      "uuid": "3d7b48e4-4b70-4f0c-bd93-71a54d4590fb",
       "title": "",
       "fullFile": "cypress/e2e/postproject.cy.js",
       "file": "cypress/e2e/postproject.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "139902c8-e91f-403d-95db-b88e1c92c090",
+          "uuid": "949c3335-4a72-4b29-9e58-ea4e590ccc86",
           "title": "post a project",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "check when user enter description less than required character.",
               "fullTitle": "post a project check when user enter description less than required character.",
               "timedOut": null,
-              "duration": 45637,
+              "duration": 42030,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "cy.get(\".expert\").click();\ncy.wait(3000);\ncy.contains(\"span\", \"Book a consultation\").click(); // cy.get(\".MuiFormControl-fullWidth\").click()\ncy.wait(3000);\ncy.get(\".MuiInputBase-root\").click({\n  multiple: true\n});\nCypress.Commands.add('getDropdownOptions', () => {\n  return cy.get('.MuiAutocomplete-popper [role=\"listbox\"] [role=\"option\"]', {\n    timeout: 10000\n  });\n});\ncy.getDropdownOptions().contains('Precision Medicine').click();\ncy.get(\".MuiCardActions-root > .MuiGrid-container > :nth-child(2) > .MuiButtonBase-root\").click();\ncy.get(\":nth-child(1) > #panel1a-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root\").click();\ncy.get('[value=\"Idea discussion\"]').check();\ncy.wait(5000);\ncy.contains(\"span\", \"Next \").click();\ncy.get('[name=\"title\"]').type(\"new project\");\ncy.get('[placeholder=\"Enter project Description\"]').type(\"The resources of a microservice The resources of a microservice  The resources of a microservice  The resources of a microservice The resources of a microservice The resources of a microservice The resources of a microservice The resources of a microservice The resources of a microservice The resources of a microservice  \");\ncy.wait(4000);\nconst imagePath = 'download.jpg';\ncy.get('input[type=\"file\"]').attachFile(imagePath);\ncy.contains(\"span\", \"Next \").click();\ncy.get('[placeholder=\"Enter budget in $\"]').type(\"200\");\ncy.contains(\"span\", \"Within a week\").click();\ncy.contains(\"span\", \"Next \").click(); // cy.wait(3000)\n// cy.contains('span', 'Post Project').click()",
               "err": {},
-              "uuid": "a31a7ca1-1d34-4b57-a8ce-e07f9f9cb3dd",
-              "parentUUID": "139902c8-e91f-403d-95db-b88e1c92c090",
+              "uuid": "758de9d7-c23b-4397-9ecd-bcd8082f4aad",
+              "parentUUID": "949c3335-4a72-4b29-9e58-ea4e590ccc86",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "a31a7ca1-1d34-4b57-a8ce-e07f9f9cb3dd"
+            "758de9d7-c23b-4397-9ecd-bcd8082f4aad"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 45637,
+          "duration": 42030,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 1,
-    "start": "2022-06-29T13:22:37.966Z",
-    "end": "2022-06-29T13:24:30.823Z",
-    "duration": 112857,
+    "start": "2022-07-04T10:06:54.400Z",
+    "end": "2022-07-04T10:08:46.185Z",
+    "duration": 111785,
     "testsRegistered": 4,
     "passPercent": 75,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "879f6804-caae-4185-993b-913f7d134b6a",
+      "uuid": "5cac78d3-578d-44fb-a84d-973ea2eac91c",
       "title": "",
       "fullFile": "cypress/e2e/topics.cy.js",
       "file": "cypress/e2e/topics.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "480f786e-b615-4f2e-9053-03355ef3edda",
+          "uuid": "7a682e11-2dcc-4e0e-9168-8d00e8b1833b",
           "title": "topics",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "check when user want to click on total questions link",
               "fullTitle": "topics check when user want to click on total questions link",
               "timedOut": null,
-              "duration": 32332,
+              "duration": 32697,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.get(\".topic\").click();\ncy.wait(8000);\ncy.contains('a', 'Questions').click();\ncy.wait(8000);",
               "err": {},
-              "uuid": "ee05e164-bafa-451f-9c4c-2660fee280a4",
-              "parentUUID": "480f786e-b615-4f2e-9053-03355ef3edda",
+              "uuid": "ed0f0b03-6d38-49f9-b72b-a7f49bdba179",
+              "parentUUID": "7a682e11-2dcc-4e0e-9168-8d00e8b1833b",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "check when user want to click on total experts link",
               "fullTitle": "topics check when user want to click on total experts link",
               "timedOut": null,
-              "duration": 32210,
+              "duration": 30820,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "cy.get(\".topic\").click();\ncy.wait(8000);\ncy.contains('a', 'Experts').click();\ncy.wait(8000); // cy.go('back')",
               "err": {},
-              "uuid": "c144d6f2-89cc-4f46-bcef-6bd6070bece7",
-              "parentUUID": "480f786e-b615-4f2e-9053-03355ef3edda",
+              "uuid": "4669381f-100c-49c8-b6c0-d53f493a4e36",
+              "parentUUID": "7a682e11-2dcc-4e0e-9168-8d00e8b1833b",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "check when user want to follow topic",
               "fullTitle": "topics check when user want to follow topic",
               "timedOut": null,
-              "duration": 20722,
+              "duration": 20340,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -83,8 +83,8 @@
               "context": null,
               "code": "cy.get(\".topic\").click();\ncy.wait(8000);\ncy.contains('span', 'Follow').first().click();",
               "err": {},
-              "uuid": "ccdfadd5-b02e-40b7-86b6-06ab2064cabe",
-              "parentUUID": "480f786e-b615-4f2e-9053-03355ef3edda",
+              "uuid": "c86f1c90-20ff-4f22-a72e-4ce2bb89a7ab",
+              "parentUUID": "7a682e11-2dcc-4e0e-9168-8d00e8b1833b",
               "isHook": false,
               "skipped": false
             },
@@ -92,7 +92,7 @@
               "title": "check when user want to unfollow  followed topic",
               "fullTitle": "topics check when user want to unfollow  followed topic",
               "timedOut": null,
-              "duration": 24394,
+              "duration": 24807,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -105,24 +105,24 @@
                 "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Unfollow' within the selector: 'span' but never did.\n    at Context.eval (https://demo.insightmonk.com/__cypress/tests?p=cypress/e2e/topics.cy.js:135:8)",
                 "diff": null
               },
-              "uuid": "09a0d527-5465-439b-a819-a744b3843de4",
-              "parentUUID": "480f786e-b615-4f2e-9053-03355ef3edda",
+              "uuid": "de25fc58-f412-4a23-bfb7-53ad422e8338",
+              "parentUUID": "7a682e11-2dcc-4e0e-9168-8d00e8b1833b",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "ee05e164-bafa-451f-9c4c-2660fee280a4",
-            "c144d6f2-89cc-4f46-bcef-6bd6070bece7",
-            "ccdfadd5-b02e-40b7-86b6-06ab2064cabe"
+            "ed0f0b03-6d38-49f9-b72b-a7f49bdba179",
+            "4669381f-100c-49c8-b6c0-d53f493a4e36",
+            "c86f1c90-20ff-4f22-a72e-4ce2bb89a7ab"
           ],
           "failures": [
-            "09a0d527-5465-439b-a819-a744b3843de4"
+            "de25fc58-f412-4a23-bfb7-53ad422e8338"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 109658,
+          "duration": 108664,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

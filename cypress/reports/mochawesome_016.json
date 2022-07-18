@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2022-06-29T13:15:55.415Z",
-    "end": "2022-06-29T13:18:48.607Z",
-    "duration": 173192,
+    "start": "2022-07-04T10:00:38.091Z",
+    "end": "2022-07-04T10:03:12.832Z",
+    "duration": 154741,
     "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "53fa4f6d-78bf-4a97-a0bc-f7114c546539",
+      "uuid": "afc30c61-bf53-419b-a03f-c85f615c8f89",
       "title": "",
       "fullFile": "cypress/e2e/requestForConsultation.cy.js",
       "file": "cypress/e2e/requestForConsultation.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "bd1d6f3b-1d62-4407-8261-c176ebbc167e",
+          "uuid": "a805ab56-e041-4cc0-b5ac-5a60c42e303d",
           "title": "request for consultation",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "check when user want to request a consultion to expert.",
               "fullTitle": "request for consultation check when user want to request a consultion to expert.",
               "timedOut": null,
-              "duration": 58530,
+              "duration": 48306,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.wait(2000);\ncy.get(\".expert\").click();\ncy.get('[placeholder=\"Find Experts\"]').type('sonu yadav');\ncy.wait(8000);\ncy.get(\".MuiGrid-justify-content-xs-center\").contains(\"h6\", \"Sonu\").click();\ncy.wait(5000);\ncy.contains(\"span\", \"Request a consultation\").click();\ncy.get(\":nth-child(1) > #panel1a-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root\").click();\ncy.get('[value=\"Idea discussion\"]').check();\ncy.wait(5000);\ncy.contains(\"span\", \"Next \").click();\ncy.get('[name=\"title\"]').type(\"testing testing\");\ncy.get('[placeholder=\"Enter project Description\"]').type(\"The resources of a microservice based applications can be manipulated in several ways. It is possible to create, update, delete them, and do other operations as well.\");\ncy.contains(\"span\", \"Next \").click();\ncy.contains(\"span\", \"Within a week\").click();\ncy.contains(\"span\", \"Next \").click();",
               "err": {},
-              "uuid": "77f3d9ad-5adb-4edd-a2fc-bdd9656983e9",
-              "parentUUID": "bd1d6f3b-1d62-4407-8261-c176ebbc167e",
+              "uuid": "0318e393-8ac6-4b39-8387-c7af3f7bdbb2",
+              "parentUUID": "a805ab56-e041-4cc0-b5ac-5a60c42e303d",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "check when user enter title less than required characters",
               "fullTitle": "request for consultation check when user enter title less than required characters",
               "timedOut": null,
-              "duration": 54350,
+              "duration": 51044,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "cy.wait(2000);\ncy.get(\".expert\").click();\ncy.get('[placeholder=\"Find Experts\"]').type('sonu yadav');\ncy.wait(8000);\ncy.get(\".MuiGrid-justify-content-xs-center\").contains(\"h6\", \"Sonu\").click();\ncy.wait(5000);\ncy.contains(\"span\", \"Request a consultation\").click();\ncy.get(\":nth-child(1) > #panel1a-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root\").click();\ncy.get('[value=\"Idea discussion\"]').check();\ncy.wait(5000);\ncy.contains(\"span\", \"Next \").click();\ncy.get('[name=\"title\"]').type(\"test\");\ncy.get('[placeholder=\"Enter project Description\"]').type(\"The resources of a microservice based applications can be manipulated in several ways. It is possible to create, update, delete them, and do other operations as well.\");\ncy.contains(\"span\", \"Next \").click();\ncy.wait(5000); // cy.contains(\"span\", \"Within a week\").click()\n// cy.contains(\"span\", \"Next \").click()",
               "err": {},
-              "uuid": "21d1a90e-4b58-4520-98b0-2e1573f804c8",
-              "parentUUID": "bd1d6f3b-1d62-4407-8261-c176ebbc167e",
+              "uuid": "64ebab56-9726-4cdf-969b-b3d0dc617c6b",
+              "parentUUID": "a805ab56-e041-4cc0-b5ac-5a60c42e303d",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "check when user do not select hiring timeline",
               "fullTitle": "request for consultation check when user do not select hiring timeline",
               "timedOut": null,
-              "duration": 56870,
+              "duration": 52920,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -83,22 +83,22 @@
               "context": null,
               "code": "cy.wait(2000);\ncy.get(\".expert\").click();\ncy.get('[placeholder=\"Find Experts\"]').type('sonu yadav');\ncy.wait(8000);\ncy.get(\".MuiGrid-justify-content-xs-center\").contains(\"h6\", \"Sonu\").click();\ncy.wait(5000);\ncy.contains(\"span\", \"Request a consultation\").click();\ncy.get(\":nth-child(1) > #panel1a-header > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root\").click();\ncy.get('[value=\"Idea discussion\"]').check();\ncy.wait(5000);\ncy.contains(\"span\", \"Next \").click();\ncy.get('[name=\"title\"]').type(\"testing testing\");\ncy.get('[placeholder=\"Enter project Description\"]').type(\"The resources of a microservice based applications can be manipulated in several ways. It is possible to create, update, delete them, and do other operations as well.\");\ncy.contains(\"span\", \"Next \").click();\ncy.wait(5000);\ncy.contains(\"span\", \"Next \").click();",
               "err": {},
-              "uuid": "843685af-a2c0-467b-9634-8d55dd1cb6d8",
-              "parentUUID": "bd1d6f3b-1d62-4407-8261-c176ebbc167e",
+              "uuid": "043f7fed-41fb-4a10-825f-219e1540a192",
+              "parentUUID": "a805ab56-e041-4cc0-b5ac-5a60c42e303d",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "77f3d9ad-5adb-4edd-a2fc-bdd9656983e9",
-            "21d1a90e-4b58-4520-98b0-2e1573f804c8",
-            "843685af-a2c0-467b-9634-8d55dd1cb6d8"
+            "0318e393-8ac6-4b39-8387-c7af3f7bdbb2",
+            "64ebab56-9726-4cdf-969b-b3d0dc617c6b",
+            "043f7fed-41fb-4a10-825f-219e1540a192"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 169750,
+          "duration": 152270,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

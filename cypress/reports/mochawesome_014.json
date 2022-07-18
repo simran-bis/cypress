@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 2,
-    "passes": 1,
+    "passes": 0,
     "pending": 0,
-    "failures": 1,
-    "start": "2022-06-29T13:13:16.770Z",
-    "end": "2022-06-29T13:14:27.215Z",
-    "duration": 70445,
+    "failures": 2,
+    "start": "2022-07-04T09:57:12.995Z",
+    "end": "2022-07-04T09:59:09.909Z",
+    "duration": 116914,
     "testsRegistered": 2,
-    "passPercent": 50,
+    "passPercent": 0,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "1571c7d5-a261-4c63-bf7e-87fc4a00e953",
+      "uuid": "d4d021d2-32c5-44d6-937b-aece6226c4f1",
       "title": "",
       "fullFile": "cypress/e2e/public_sources.cy.js",
       "file": "cypress/e2e/public_sources.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "dbade2da-1097-4495-a162-ecc533dfb7da",
+          "uuid": "e38eca3d-686c-426b-8d03-5d2a7635a30c",
           "title": "public sources",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "check when user want to check ahare,download and add to liberary.",
               "fullTitle": "public sources check when user want to check ahare,download and add to liberary.",
               "timedOut": null,
-              "duration": 32574,
+              "duration": 28073,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -51,40 +51,43 @@
                 "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#long-button`, but never found it.\n    at Context.eval (https://demo.insightmonk.com/__cypress/tests?p=cypress/e2e/public_sources.cy.js:120:8)",
                 "diff": null
               },
-              "uuid": "fcbcd3ce-07de-44fb-99ee-da0e83a19436",
-              "parentUUID": "dbade2da-1097-4495-a162-ecc533dfb7da",
+              "uuid": "1790431e-dfd5-4958-94b5-2127812928fb",
+              "parentUUID": "e38eca3d-686c-426b-8d03-5d2a7635a30c",
               "isHook": false,
               "skipped": false
             },
             {
-              "title": "check when user want to check reports by filter",
-              "fullTitle": "public sources check when user want to check reports by filter",
+              "title": "check when user want to check share,download and add to liberary.",
+              "fullTitle": "public sources check when user want to check share,download and add to liberary.",
               "timedOut": null,
-              "duration": 34064,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
+              "duration": 85776,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
               "pending": false,
-              "context": null,
-              "code": "cy.get(\".report\").click();\ncy.wait(6000);\ncy.contains('span', 'Public Sources').click();\ncy.wait(8000); //date range\ncy.get(\".MuiSelect-root\").click();\ncy.contains(\"li\", \"Last 2 Weeks\").click();\ncy.wait(5000);\ncy.get(\":nth-child(3) > .MuiAccordionSummary-root > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root\").click();\ncy.get('[placeholder=\"Search\"]').eq(0).type(\"Company Reports\");\ncy.wait(2000);\ncy.get(\".MuiIconButton-colorSecondary\").first().click();\ncy.wait(2000);\ncy.get(\":nth-child(4) > .MuiAccordionSummary-root > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root\").click(); // cy.get('[placeholder=\"Search\"]').eq(1).type(\"North America\")\n// Cypress.Commands.add('getDropdownOptions', () => {\n//     return cy.get('.MuiAutocomplete-popper [role=\"listbox\"] [role=\"option\"]', {\n//         timeout: 10000,\n//     });\n// });\n// cy.getDropdownOptions().find(\".MuiSvgIcon-root\", ).click();\n// cy.wait(2000)",
-              "err": {},
-              "uuid": "1dfdddca-9c01-407c-b05d-4eb8ab77e520",
-              "parentUUID": "dbade2da-1097-4495-a162-ecc533dfb7da",
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Failed screenshot\",\n        \"value\": \"/public_sources.cy.js/public sources -- check when user want to check share,download and add to liberary (failed).png\"\n      }\n    ]\n  ]\n}",
+              "code": "cy.get(\".report\").click();\ncy.wait(6000);\ncy.contains('span', 'Public Sources').click();\ncy.wait(8000);\ncy.get(\".MuiSelect-root\").click();\ncy.contains(\"li\", \"Last 2 Weeks\").click();\ncy.wait(10000);\ncy.get(\":nth-child(4) > .MuiAccordionSummary-root > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root\").click();\ncy.wait(8000);\ncy.get('[placeholder=\"Search\"]').eq(1).type(\"North America\");\ncy.get('input[name=\"726440\"]').click();\ncy.wait(6000);\ncy.get(\":nth-child(5) > .MuiAccordionSummary-root > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root\").click();\ncy.wait(8000);\ncy.get('[placeholder=\"Search\"]').eq(2).type(\"services\");\ncy.get('input[name=\"726497\"]').click();\ncy.wait(6000);\ncy.get(\":nth-child(6) > .MuiAccordionSummary-root > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root\").click();\ncy.wait(8000);\ncy.get('[placeholder=\"Search\"]').eq(3).type(\"Allianz\");\ncy.get('input[name=\"12d5bb6baa99dd6cdef029475aa2ff22\"]').click();\ncy.wait(6000);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `input[name=\"12d5bb6baa99dd6cdef029475aa2ff22\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `input[name=\"12d5bb6baa99dd6cdef029475aa2ff22\"]`, but never found it.\n    at Context.eval (https://demo.insightmonk.com/__cypress/tests?p=cypress/e2e/public_sources.cy.js:175:8)",
+                "diff": null
+              },
+              "uuid": "61bd4d8e-0d51-455b-bae8-a5a22b5d2c71",
+              "parentUUID": "e38eca3d-686c-426b-8d03-5d2a7635a30c",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [
-            "1dfdddca-9c01-407c-b05d-4eb8ab77e520"
-          ],
+          "passes": [],
           "failures": [
-            "fcbcd3ce-07de-44fb-99ee-da0e83a19436"
+            "1790431e-dfd5-4958-94b5-2127812928fb",
+            "61bd4d8e-0d51-455b-bae8-a5a22b5d2c71"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 66638,
+          "duration": 113849,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

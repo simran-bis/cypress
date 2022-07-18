@@ -2,8 +2,8 @@ describe('liberary', () => {
 
     beforeEach(() => {
         cy.viewport(1200, 1000)
-
-        cy.visit('https://demo.insightmonk.com/discover')
+        cy.visit(Cypress.env('url'))
+            // cy.visit('https://demo.insightmonk.com/discover')
         cy.clearCookies({ log: true })
         cy.clearLocalStorage({ log: true })
         cy.contains("span", "Login").click()

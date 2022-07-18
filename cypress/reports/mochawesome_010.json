@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2022-06-29T13:09:21.612Z",
-    "end": "2022-06-29T13:09:42.784Z",
-    "duration": 21172,
+    "start": "2022-07-04T09:50:28.562Z",
+    "end": "2022-07-04T09:50:48.433Z",
+    "duration": 19871,
     "testsRegistered": 2,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "f50a0f6c-3691-468b-8ef3-bf750ee3cf57",
+      "uuid": "4ad7b217-21d4-4cfe-a0dc-fc14e816eb75",
       "title": "",
       "fullFile": "cypress/e2e/notification.cy.js",
       "file": "cypress/e2e/notification.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "3d2bda3a-95ad-4640-8fc0-55f74bc85b03",
+          "uuid": "71d43660-1575-4a3b-98af-7463210b0635",
           "title": "notification",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "check when user want to check notification.",
               "fullTitle": "notification check when user want to check notification.",
               "timedOut": null,
-              "duration": 18049,
+              "duration": 15976,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -51,8 +51,8 @@
                 "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Skip' within the selector: 'button' but never did.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `notification`\n    at Context.eval (https://demo.insightmonk.com/__cypress/tests?p=cypress/e2e/notification.cy.js:129:10)",
                 "diff": null
               },
-              "uuid": "4b989d65-304d-42eb-aec2-de0c76efc022",
-              "parentUUID": "3d2bda3a-95ad-4640-8fc0-55f74bc85b03",
+              "uuid": "cacbadae-59fe-46af-bdb7-562b1590b762",
+              "parentUUID": "71d43660-1575-4a3b-98af-7463210b0635",
               "isHook": false,
               "skipped": false
             },
@@ -69,8 +69,8 @@
               "context": null,
               "code": "cy.get(\".MuiBadge-root > .MuiSvgIcon-root > path\").click();\ncy.wait(5000);\ncy.get(':nth-child(1) > .MuiButtonBase-root > .MuiCardHeader-root').click();",
               "err": {},
-              "uuid": "c379eb98-0d4b-43a9-8135-27c0c5093056",
-              "parentUUID": "3d2bda3a-95ad-4640-8fc0-55f74bc85b03",
+              "uuid": "d8d76288-d1e7-4fa0-83aa-85153d014985",
+              "parentUUID": "71d43660-1575-4a3b-98af-7463210b0635",
               "isHook": false,
               "skipped": true
             }
@@ -78,13 +78,13 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "4b989d65-304d-42eb-aec2-de0c76efc022"
+            "cacbadae-59fe-46af-bdb7-562b1590b762"
           ],
           "pending": [],
           "skipped": [
-            "c379eb98-0d4b-43a9-8135-27c0c5093056"
+            "d8d76288-d1e7-4fa0-83aa-85153d014985"
           ],
-          "duration": 18049,
+          "duration": 15976,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

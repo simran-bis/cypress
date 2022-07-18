@@ -1,3 +1,5 @@
+const cypress = require("cypress")
+
 describe('membership', () => {
 
     before(() => {

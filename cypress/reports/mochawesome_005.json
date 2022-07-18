@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2022-06-29T13:02:43.363Z",
-    "end": "2022-06-29T13:03:34.485Z",
-    "duration": 51122,
+    "start": "2022-07-04T09:43:50.140Z",
+    "end": "2022-07-04T09:44:41.655Z",
+    "duration": 51515,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "0cbc8054-2eed-44ae-8d97-925434b2d9e5",
+      "uuid": "e7f6704d-7236-4c2c-a273-8685b7329f8b",
       "title": "",
       "fullFile": "cypress/e2e/guide_tool.cy.js",
       "file": "cypress/e2e/guide_tool.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "583a3865-fe6e-4f72-9cf2-c7a8b17e186b",
+          "uuid": "654a979b-c9dd-45f6-84b7-403812ea75ab",
           "title": "guide_tool",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "check when user follow guide tool.",
               "fullTitle": "guide_tool check when user follow guide tool.",
               "timedOut": null,
-              "duration": 33269,
+              "duration": 33383,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.wait(3000);\ncy.get(`[aria-label=\"Next\"]`).click();\ncy.wait(2000);\ncy.get(`[aria-label=\"Next\"]`).click();\ncy.wait(2000);\ncy.get(`[aria-label=\"Next\"]`).click();\ncy.contains('button', 'Back').click();\ncy.wait(4000);\ncy.get(`[aria-label=\"Next\"]`).click();\ncy.wait(2000);\ncy.get(`[aria-label=\"Next\"]`).click();\ncy.wait(2000);\ncy.get(`[aria-label=\"Next\"]`).click();\ncy.wait(2000);",
               "err": {},
-              "uuid": "86da32c2-6532-43f8-b572-470e916321e6",
-              "parentUUID": "583a3865-fe6e-4f72-9cf2-c7a8b17e186b",
+              "uuid": "cffb8c56-8f84-4557-bf07-3f74a8e6a75b",
+              "parentUUID": "654a979b-c9dd-45f6-84b7-403812ea75ab",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "check when user follow guide tool.",
               "fullTitle": "guide_tool check when user follow guide tool.",
               "timedOut": null,
-              "duration": 14716,
+              "duration": 15427,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -65,21 +65,21 @@
               "context": null,
               "code": "cy.wait(3000);\ncy.contains(\"button\", \"Skip\").click();",
               "err": {},
-              "uuid": "411b505f-a84f-4eda-9ff8-9d10aae3a3ea",
-              "parentUUID": "583a3865-fe6e-4f72-9cf2-c7a8b17e186b",
+              "uuid": "a39fe515-3488-484b-be9c-d6c95f211aeb",
+              "parentUUID": "654a979b-c9dd-45f6-84b7-403812ea75ab",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "86da32c2-6532-43f8-b572-470e916321e6",
-            "411b505f-a84f-4eda-9ff8-9d10aae3a3ea"
+            "cffb8c56-8f84-4557-bf07-3f74a8e6a75b",
+            "a39fe515-3488-484b-be9c-d6c95f211aeb"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 47985,
+          "duration": 48810,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
